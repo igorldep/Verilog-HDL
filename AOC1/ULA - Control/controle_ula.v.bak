@@ -1,0 +1,138 @@
+module controle(op,lastBit,conteudoEscrita,EscreveMem,LeMem,JumpInc,Branch,UlaOp,RegOuImediato,RegEscrita,RegFonte);
+    input [2:0]op;
+    input lastBit;
+    output reg EscreveMem,LeMem,JumpInc,Branch,UlaOp,RegOuImediato,RegEscrita,RegFonte;
+    output reg[1:0]conteudoEscrita;
+    always @(op,lastBit)
+    begin
+      case(op)
+        3'b000:
+        begin
+          if(lastBit ==1'b0)
+          begin
+           conteudoEscrita <= 2'b01; 
+           EscreveMem <= 1'b0; 
+           LeMem <= 1'b0; 
+           JumpInc<=0; 
+           Branch<=0; 
+           UlaOp <= 0; 
+           RegOuImediato<=0; 
+           RegEscrita<=1;
+	   RegFonte<=0;
+          end
+          else
+          begin
+           conteudoEscrita <= 2'b01; 
+           EscreveMem <= 1'b0; 
+           LeMem <= 1'b0; 
+           JumpInc<=0; 
+           Branch<=0; 
+           UlaOp <= 0; 
+           RegOuImediato<=1'b1; 
+           RegEscrita<=1;
+	   RegFonte<=1;
+          end
+        end
+        3'b001:
+	begin
+          conteudoEscrita <= 2'b00; 
+          EscreveMem <= 1; 
+          LeMem <= 0; 
+          JumpInc<=0; 
+          Branch<=0; 
+          UlaOp <= 0; 
+          RegOuImediato<=0; 
+          RegEscrita<=0;
+	  RegFonte<=0;
+        end
+        3'b010:
+        begin 
+          conteudoEscrita <= 2'b00; 
+          EscreveMem <= 0; 
+          LeMem <=1; 
+          JumpInc<=0; 
+          Branch<=0; 
+          UlaOp <= 0; 
+          RegOuImediato<=0; 
+          RegEscrita<=1;
+	  RegFonte<=0;
+        end
+        3'b011: 
+        begin
+          conteudoEscrita <= 2'b11; 
+          EscreveMem <= 1'b0; 
+          LeMem <= 1'b0; 
+          JumpInc<=0; 
+          Branch<=0; 
+          UlaOp <= 1'b0; 
+          RegOuImediato<=1; 
+          RegEscrita<=1;
+	  RegFonte<=1;
+        end 
+        3'b100: 
+        begin
+          conteudoEscrita <= 2'b00; 
+          EscreveMem <= 1'b0; 
+          LeMem <= 1'b0; 
+          JumpInc<=0; 
+          Branch<=1; 
+          UlaOp <= 1; 
+          RegOuImediato<=0; 
+          RegEscrita<=0;
+	  RegFonte<=0;
+        end
+        3'b101: 
+        begin
+          conteudoEscrita <= 2'b00; 
+          EscreveMem <= 1'b0; 
+          LeMem <= 1'b0; 
+          JumpInc<=1;
+          Branch<=0; 
+          UlaOp <= 1'bz; 
+          RegOuImediato<=1'bz; 
+          RegEscrita<=0;
+	  RegFonte<=1;
+        end
+        3'b110: 
+        begin
+          conteudoEscrita <= 2'b00; 
+          EscreveMem <= 1'b0; 
+          LeMem <= 1'b0; 
+          JumpInc<=0; 
+          Branch<=1; 
+          UlaOp <= 1; 
+          RegOuImediato<=0; 
+          RegEscrita<=0;
+	  RegFonte<=0;
+        end
+        3'b111: 
+        begin
+          conteudoEscrita <= 2'b01; 
+          EscreveMem <= 1'b0; 
+          LeMem <= 1'b0; 
+          JumpInc<=0; 
+          Branch<=0; 
+          UlaOp <= 1; 
+          RegOuImediato<=1;
+          RegEscrita<=1;
+          RegFonte<=1;
+        end
+      endcase  
+    end
+endmodule
+
+module ula(clk,ulaOp,in1,in2,out1,zero);
+  input ulaOp,clk;
+  input [7:0]in1,in2;
+  output reg[7:0]out1;
+  output zero;
+  assign zero = (out1 == 0); //zero e 1 caso todos são 0
+  always @(ulaOp,in1,in2)
+  begin
+    case(ulaOp)
+      0: out1 <= in1 + in2;
+      1: out1 <= in1 - in2;
+      default: out1 <= 1;
+    endcase   
+  end
+endmodule

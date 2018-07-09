@@ -1,0 +1,44 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do mux8_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Aluno/Desktop/Aula\ 6\ -\ LSD {C:/Users/Aluno/Desktop/Aula 6 - LSD/mux8.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux8
+# 
+# Top level modules:
+# 	mux8
+# vlog -vlog01compat -work work +incdir+C:/Users/Aluno/Desktop/Aula\ 6\ -\ LSD {C:/Users/Aluno/Desktop/Aula 6 - LSD/muxx.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module muxx
+# 
+# Top level modules:
+# 	muxx
+# 
+vsim work.mux8
+# vsim work.mux8 
+# Loading work.mux8
+# Loading work.muxx
+add wave -position insertpoint  \
+sim:/mux8/i0 \
+sim:/mux8/i1 \
+sim:/mux8/i2 \
+sim:/mux8/i3 \
+sim:/mux8/sela \
+sim:/mux8/selb \
+sim:/mux8/s
+force -freeze sim:/mux8/sela 1 0, 0 {50 ps} -r 100
+force -freeze sim:/mux8/selb 1 0, 0 {100 ps} -r 200
+force -freeze sim:/mux8/i0 1 0, 0 {5 ps} -r 10
+force -freeze sim:/mux8/i1 1 0, 0 {10 ps} -r 20
+force -freeze sim:/mux8/i2 1 0, 0 {15 ps} -r 30
+force -freeze sim:/mux8/i3 1 0, 0 {20 ps} -r 40
+run

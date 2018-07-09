@@ -1,0 +1,33 @@
+!SESSION 2007-06-13 19:45:51.921 -----------------------------------------------
+eclipse.buildId=M20060629-1905
+java.version=1.5.0_06
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Command-line arguments:  -data D:\keith_temp\quartusII\DE2_System_v1.5\DE2_System_v1.5\DE2_demonstrations\DE2_SD_Card_Audio -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 1 0 2007-06-13 19:45:54.015
+!MESSAGE Conversion of persistent properties completed successfully.
+
+!ENTRY org.eclipse.cdt.debug.core 4 1000 2007-06-13 19:46:00.187
+!MESSAGE Unable to restore source location: Unable to initialize source location - invalid directory path C:\altera\kits\nios2_60\bin\nios2-gnutools\src.
+
+!ENTRY org.eclipse.cdt.debug.core 4 1000 2007-06-13 19:46:01.984
+!MESSAGE Unable to restore source location: Unable to initialize source location - invalid directory path C:\altera\kits\nios2_60\bin\nios2-gnutools\src.
+
+!ENTRY com.altera.ide.core 1 0 2007-06-13 19:46:13.609
+!MESSAGE C:\altera\71\quartus\bin\cygwin\bin/cygpath --unix --file - 
+
+!ENTRY com.altera.nj.launch 1 0 2007-06-13 19:49:36.468
+!MESSAGE jtagconfig --listhardware 
+
+!ENTRY com.altera.nj.launch 1 0 2007-06-13 19:49:37.312
+!MESSAGE jtagconfig --cable USB-Blaster [USB-0] --extra-info 
+!SESSION 2007-06-20 16:56:59.837 -----------------------------------------------
+eclipse.buildId=M20060629-1905
+java.version=1.5.0_06
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Command-line arguments:  -data D:\keith_temp\quartusII\DE2_System_v1.5\DE2_System_v1.5\DE2_demonstrations\DE2_SD_Card_Audio -os win32 -ws win32 -arch x86
+
+!ENTRY com.altera.ide.core 1 0 2007-06-20 16:57:17.165
+!MESSAGE C:\altera\71\quartus\bin\cygwin\bin/cygpath --unix --file - 

@@ -1,0 +1,433 @@
+|tp11
+
+
+|tp11|PC:pc_
+ck => pc_atual[0]~reg0.CLK
+ck => pc_atual[1]~reg0.CLK
+ck => pc_atual[2]~reg0.CLK
+ck => pc_atual[3]~reg0.CLK
+ck => pc_atual[4]~reg0.CLK
+ck => pc_atual[5]~reg0.CLK
+ck => pc_atual[6]~reg0.CLK
+ck => pc_atual[7]~reg0.CLK
+pc_novo[0] => pc_atual[0]~reg0.DATAIN
+pc_novo[1] => pc_atual[1]~reg0.DATAIN
+pc_novo[2] => pc_atual[2]~reg0.DATAIN
+pc_novo[3] => pc_atual[3]~reg0.DATAIN
+pc_novo[4] => pc_atual[4]~reg0.DATAIN
+pc_novo[5] => pc_atual[5]~reg0.DATAIN
+pc_novo[6] => pc_atual[6]~reg0.DATAIN
+pc_novo[7] => pc_atual[7]~reg0.DATAIN
+pc_atual[0] <= pc_atual[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pc_atual[1] <= pc_atual[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pc_atual[2] <= pc_atual[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pc_atual[3] <= pc_atual[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pc_atual[4] <= pc_atual[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pc_atual[5] <= pc_atual[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pc_atual[6] <= pc_atual[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pc_atual[7] <= pc_atual[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tp11|memoryInst:memI_
+ck => out[0]~reg0.CLK
+ck => out[1]~reg0.CLK
+ck => out[2]~reg0.CLK
+ck => out[3]~reg0.CLK
+ck => out[4]~reg0.CLK
+ck => out[5]~reg0.CLK
+ck => out[6]~reg0.CLK
+ck => out[7]~reg0.CLK
+sce[0] => ~NO_FANOUT~
+sce[1] => ~NO_FANOUT~
+sce[2] => ~NO_FANOUT~
+sce[3] => ~NO_FANOUT~
+sce[4] => ~NO_FANOUT~
+sce[5] => ~NO_FANOUT~
+sce[6] => ~NO_FANOUT~
+sce[7] => ~NO_FANOUT~
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tp11|Somador:soma_
+in1[0] => Add0.IN8
+in1[1] => Add0.IN7
+in1[2] => Add0.IN6
+in1[3] => Add0.IN5
+in1[4] => Add0.IN4
+in1[5] => Add0.IN3
+in1[6] => Add0.IN2
+in1[7] => Add0.IN1
+in2[0] => Add0.IN16
+in2[1] => Add0.IN15
+in2[2] => Add0.IN14
+in2[3] => Add0.IN13
+in2[4] => Add0.IN12
+in2[5] => Add0.IN11
+in2[6] => Add0.IN10
+in2[7] => Add0.IN9
+out[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tp11|Control:controle_
+op[0] => Decoder0.IN2
+op[0] => Mux0.IN9
+op[0] => Mux1.IN9
+op[1] => Decoder0.IN1
+op[1] => Mux0.IN8
+op[1] => Mux1.IN8
+op[2] => Decoder0.IN0
+op[2] => Mux0.IN7
+op[2] => Mux1.IN7
+LastBit => Mux0.IN10
+LastBit => Mux1.IN10
+MemWrite <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+MemRead <= MemRead.DB_MAX_OUTPUT_PORT_TYPE
+PCSrc <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+ALUSrc <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+ALUOp <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+RegDst <= <GND>
+RegWrite <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+MemtoReg <= MemRead.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tp11|Mux2B2_1:mux2b21_
+in1[0] => out.DATAA
+in1[1] => out.DATAA
+in2[0] => out.DATAB
+in2[1] => out.DATAB
+sel => Decoder0.IN0
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tp11|RegB:rBank_
+ck[0] => RF.we_a.CLK
+ck[0] => RF.waddr_a[1].CLK
+ck[0] => RF.waddr_a[0].CLK
+ck[0] => RF.data_a[7].CLK
+ck[0] => RF.data_a[6].CLK
+ck[0] => RF.data_a[5].CLK
+ck[0] => RF.data_a[4].CLK
+ck[0] => RF.data_a[3].CLK
+ck[0] => RF.data_a[2].CLK
+ck[0] => RF.data_a[1].CLK
+ck[0] => RF.data_a[0].CLK
+ck[0] => RF.CLK0
+d[0] => RF.waddr_a[0].DATAIN
+d[0] => always0.IN0
+d[0] => RF.WADDR
+d[1] => RF.waddr_a[1].DATAIN
+d[1] => always0.IN1
+d[1] => RF.WADDR1
+s1[0] => RF.RADDR
+s1[1] => RF.RADDR1
+s2[0] => RF.PORTBRADDR
+s2[1] => RF.PORTBRADDR1
+Data[0] => RF.data_a[0].DATAIN
+Data[0] => RF.DATAIN
+Data[1] => RF.data_a[1].DATAIN
+Data[1] => RF.DATAIN1
+Data[2] => RF.data_a[2].DATAIN
+Data[2] => RF.DATAIN2
+Data[3] => RF.data_a[3].DATAIN
+Data[3] => RF.DATAIN3
+Data[4] => RF.data_a[4].DATAIN
+Data[4] => RF.DATAIN4
+Data[5] => RF.data_a[5].DATAIN
+Data[5] => RF.DATAIN5
+Data[6] => RF.data_a[6].DATAIN
+Data[6] => RF.DATAIN6
+Data[7] => RF.data_a[7].DATAIN
+Data[7] => RF.DATAIN7
+Signal[0] => always0.IN1
+out1[0] <= RF.DATAOUT
+out1[1] <= RF.DATAOUT1
+out1[2] <= RF.DATAOUT2
+out1[3] <= RF.DATAOUT3
+out1[4] <= RF.DATAOUT4
+out1[5] <= RF.DATAOUT5
+out1[6] <= RF.DATAOUT6
+out1[7] <= RF.DATAOUT7
+out2[0] <= RF.PORTBDATAOUT
+out2[1] <= RF.PORTBDATAOUT1
+out2[2] <= RF.PORTBDATAOUT2
+out2[3] <= RF.PORTBDATAOUT3
+out2[4] <= RF.PORTBDATAOUT4
+out2[5] <= RF.PORTBDATAOUT5
+out2[6] <= RF.PORTBDATAOUT6
+out2[7] <= RF.PORTBDATAOUT7
+
+
+|tp11|Extensor1_8:ext18_
+in => out[0].DATAIN
+in => out[7].DATAIN
+in => out[6].DATAIN
+in => out[5].DATAIN
+in => out[4].DATAIN
+in => out[3].DATAIN
+in => out[2].DATAIN
+in => out[1].DATAIN
+out[0] <= in.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= in.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= in.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= in.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= in.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tp11|Mux2_1:mux21_
+in1[0] => out.DATAA
+in1[1] => out.DATAA
+in1[2] => out.DATAA
+in1[3] => out.DATAA
+in1[4] => out.DATAA
+in1[5] => out.DATAA
+in1[6] => out.DATAA
+in1[7] => out.DATAA
+in2[0] => out.DATAB
+in2[1] => out.DATAB
+in2[2] => out.DATAB
+in2[3] => out.DATAB
+in2[4] => out.DATAB
+in2[5] => out.DATAB
+in2[6] => out.DATAB
+in2[7] => out.DATAB
+sel => Decoder0.IN0
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tp11|ALU:ula_
+ck => ~NO_FANOUT~
+ALUOp => Decoder0.IN0
+in1[0] => Add0.IN8
+in1[0] => out1.IN0
+in1[1] => Add0.IN7
+in1[1] => out1.IN0
+in1[2] => Add0.IN6
+in1[2] => out1.IN0
+in1[3] => Add0.IN5
+in1[3] => out1.IN0
+in1[4] => Add0.IN4
+in1[4] => out1.IN0
+in1[5] => Add0.IN3
+in1[5] => out1.IN0
+in1[6] => Add0.IN2
+in1[6] => out1.IN0
+in1[7] => Add0.IN1
+in1[7] => out1.IN0
+in2[0] => Add0.IN16
+in2[0] => out1.IN1
+in2[1] => Add0.IN15
+in2[1] => out1.IN1
+in2[2] => Add0.IN14
+in2[2] => out1.IN1
+in2[3] => Add0.IN13
+in2[3] => out1.IN1
+in2[4] => Add0.IN12
+in2[4] => out1.IN1
+in2[5] => Add0.IN11
+in2[5] => out1.IN1
+in2[6] => Add0.IN10
+in2[6] => out1.IN1
+in2[7] => Add0.IN9
+in2[7] => out1.IN1
+out1[0] <= out1.DB_MAX_OUTPUT_PORT_TYPE
+out1[1] <= out1.DB_MAX_OUTPUT_PORT_TYPE
+out1[2] <= out1.DB_MAX_OUTPUT_PORT_TYPE
+out1[3] <= out1.DB_MAX_OUTPUT_PORT_TYPE
+out1[4] <= out1.DB_MAX_OUTPUT_PORT_TYPE
+out1[5] <= out1.DB_MAX_OUTPUT_PORT_TYPE
+out1[6] <= out1.DB_MAX_OUTPUT_PORT_TYPE
+out1[7] <= out1.DB_MAX_OUTPUT_PORT_TYPE
+zero <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tp11|Branch:desvio_
+zero => always0.IN0
+comp => always0.IN0
+inst[0] => Equal0.IN2
+inst[0] => Equal1.IN2
+inst[1] => Equal0.IN1
+inst[1] => Equal1.IN1
+inst[2] => Equal0.IN0
+inst[2] => Equal1.IN0
+sJump => out.OUTPUTSELECT
+sJump => out[1].DATAIN
+sBranch => always0.IN1
+sBranch => always0.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= sJump.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tp11|Extensor5_8:ext58_
+in[0] => out[0].DATAIN
+in[1] => out[1].DATAIN
+in[2] => out[2].DATAIN
+in[3] => out[3].DATAIN
+in[4] => out[4].DATAIN
+in[4] => out[7].DATAIN
+in[4] => out[6].DATAIN
+in[4] => out[5].DATAIN
+out[0] <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= in[4].DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= in[4].DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= in[4].DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= in[4].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tp11|Somador:s_jump
+in1[0] => Add0.IN8
+in1[1] => Add0.IN7
+in1[2] => Add0.IN6
+in1[3] => Add0.IN5
+in1[4] => Add0.IN4
+in1[5] => Add0.IN3
+in1[6] => Add0.IN2
+in1[7] => Add0.IN1
+in2[0] => Add0.IN16
+in2[1] => Add0.IN15
+in2[2] => Add0.IN14
+in2[3] => Add0.IN13
+in2[4] => Add0.IN12
+in2[5] => Add0.IN11
+in2[6] => Add0.IN10
+in2[7] => Add0.IN9
+out[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tp11|Somador:s_branch
+in1[0] => Add0.IN8
+in1[1] => Add0.IN7
+in1[2] => Add0.IN6
+in1[3] => Add0.IN5
+in1[4] => Add0.IN4
+in1[5] => Add0.IN3
+in1[6] => Add0.IN2
+in1[7] => Add0.IN1
+in2[0] => Add0.IN16
+in2[1] => Add0.IN15
+in2[2] => Add0.IN14
+in2[3] => Add0.IN13
+in2[4] => Add0.IN12
+in2[5] => Add0.IN11
+in2[6] => Add0.IN10
+in2[7] => Add0.IN9
+out[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tp11|Memory:mem_
+ck => MEM.we_a.CLK
+ck => MEM.waddr_a[6].CLK
+ck => MEM.waddr_a[5].CLK
+ck => MEM.waddr_a[4].CLK
+ck => MEM.waddr_a[3].CLK
+ck => MEM.waddr_a[2].CLK
+ck => MEM.waddr_a[1].CLK
+ck => MEM.waddr_a[0].CLK
+ck => MEM.data_a[7].CLK
+ck => MEM.data_a[6].CLK
+ck => MEM.data_a[5].CLK
+ck => MEM.data_a[4].CLK
+ck => MEM.data_a[3].CLK
+ck => MEM.data_a[2].CLK
+ck => MEM.data_a[1].CLK
+ck => MEM.data_a[0].CLK
+ck => MEM.CLK0
+signalite => MEM.we_a.DATAIN
+signalite => MEM.WE
+signalRead => out[0]$latch.LATCH_ENABLE
+signalRead => out[1]$latch.LATCH_ENABLE
+signalRead => out[2]$latch.LATCH_ENABLE
+signalRead => out[3]$latch.LATCH_ENABLE
+signalRead => out[4]$latch.LATCH_ENABLE
+signalRead => out[5]$latch.LATCH_ENABLE
+signalRead => out[6]$latch.LATCH_ENABLE
+signalRead => out[7]$latch.LATCH_ENABLE
+sce[0] => MEM.waddr_a[0].DATAIN
+sce[0] => MEM.WADDR
+sce[0] => MEM.RADDR
+sce[1] => MEM.waddr_a[1].DATAIN
+sce[1] => MEM.WADDR1
+sce[1] => MEM.RADDR1
+sce[2] => MEM.waddr_a[2].DATAIN
+sce[2] => MEM.WADDR2
+sce[2] => MEM.RADDR2
+sce[3] => MEM.waddr_a[3].DATAIN
+sce[3] => MEM.WADDR3
+sce[3] => MEM.RADDR3
+sce[4] => MEM.waddr_a[4].DATAIN
+sce[4] => MEM.WADDR4
+sce[4] => MEM.RADDR4
+sce[5] => MEM.waddr_a[5].DATAIN
+sce[5] => MEM.WADDR5
+sce[5] => MEM.RADDR5
+sce[6] => MEM.waddr_a[6].DATAIN
+sce[6] => MEM.WADDR6
+sce[6] => MEM.RADDR6
+sce[7] => ~NO_FANOUT~
+Data[0] => MEM.data_a[0].DATAIN
+Data[0] => MEM.DATAIN
+Data[1] => MEM.data_a[1].DATAIN
+Data[1] => MEM.DATAIN1
+Data[2] => MEM.data_a[2].DATAIN
+Data[2] => MEM.DATAIN2
+Data[3] => MEM.data_a[3].DATAIN
+Data[3] => MEM.DATAIN3
+Data[4] => MEM.data_a[4].DATAIN
+Data[4] => MEM.DATAIN4
+Data[5] => MEM.data_a[5].DATAIN
+Data[5] => MEM.DATAIN5
+Data[6] => MEM.data_a[6].DATAIN
+Data[6] => MEM.DATAIN6
+Data[7] => MEM.data_a[7].DATAIN
+Data[7] => MEM.DATAIN7
+out[0] <= out[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

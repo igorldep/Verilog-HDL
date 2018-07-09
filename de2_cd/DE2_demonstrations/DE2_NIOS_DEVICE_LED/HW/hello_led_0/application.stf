@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stf>
+	<project target="Nios II Application" sdk="hello_led_0_syslib">
+	</project>
+</stf>

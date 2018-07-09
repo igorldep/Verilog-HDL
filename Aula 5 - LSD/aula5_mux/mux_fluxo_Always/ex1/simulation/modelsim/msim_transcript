@@ -1,0 +1,56 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do mux_21_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Aluno/Desktop/Aula\ 5\ -\ LSD/aula5_mux/mux_fluxo_Always/ex1 {C:/Users/Aluno/Desktop/Aula 5 - LSD/aula5_mux/mux_fluxo_Always/ex1/mux_21.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_21
+# 
+# Top level modules:
+# 	mux_21
+# 
+vsim work.mux_21
+# vsim work.mux_21 
+# Loading work.mux_21
+vsim work.mux_21
+# vsim work.mux_21 
+# Loading work.mux_21
+vsim work.mux_21
+# vsim work.mux_21 
+# Loading work.mux_21
+vsim work.mux_21
+# vsim work.mux_21 
+# Loading work.mux_21
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add dataflow  \
+sim:/mux_21/sel
+# WARNING: No extended dataflow license exists
+# No drivers or ports for sel
+add wave -position insertpoint  \
+sim:/mux_21/y \
+sim:/mux_21/i0 \
+sim:/mux_21/i1 \
+sim:/mux_21/sel
+force -freeze sim:/mux_21/i0 1 0, 0 {5 ps} -r 10
+force -freeze sim:/mux_21/i1 1 0, 0 {25 ps} -r 50
+force -freeze sim:/mux_21/sel 1 0, 0 {150 ps} -r 300
+run

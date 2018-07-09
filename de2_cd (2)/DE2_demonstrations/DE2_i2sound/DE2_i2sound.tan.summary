@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 15.799 ns
+From           : i2c:inst|SD_COUNTER[2]
+To             : I2C_SCLK
+From Clock     : 50MHZ
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.933 ns
+From           : AUD_ADCDAT
+To             : AUD_DACDAT
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: '50MHZ'
+Slack          : 14.763 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : 190.95 MHz ( period = 5.237 ns )
+From           : i2c:inst|SD_COUNTER[4]
+To             : i2c:inst|END
+From Clock     : 50MHZ
+To Clock       : 50MHZ
+Failed Paths   : 0
+
+Type           : Clock Hold: '50MHZ'
+Slack          : -3.488 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : CLOCK_500:inst4|COUNTER_500[10]
+To             : i2c:inst|SD_COUNTER[0]
+From Clock     : 50MHZ
+To Clock       : 50MHZ
+Failed Paths   : 12
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 12
+
+--------------------------------------------------------------------------------------
+

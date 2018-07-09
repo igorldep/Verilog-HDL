@@ -1,0 +1,168 @@
+Synthesis report
+Fri Jul 07 20:40:41 2017
+Quartus Prime Version 17.0.0 Build 290 04/26/2017 SJ Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Synthesis Summary
+  2. Synthesis Settings
+  3. Synthesis Source Files Read
+  4. Synthesis Messages
+
+
+
++-----------------------------------------------------------+
+; Synthesis Summary                                         ;
++-----------------------+-----------------------------------+
+; Synthesis Status      ; Failed - Fri Jul 07 20:40:41 2017 ;
+; Revision Name         ; tp11                              ;
+; Top-level Entity Name ; tp11                              ;
+; Family                ; Cyclone 10 GX                     ;
++-----------------------+-----------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Synthesis Settings                                                                                                        ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 10CX220YF780I5G    ;                    ;
+; Top-level entity name                                                           ; tp11               ; tp11               ;
+; Family name                                                                     ; Cyclone 10 GX      ; Cyclone V          ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Optimization Mode                                                               ; Balanced           ; Balanced           ;
+; Allow Register Merging                                                          ; On                 ; On                 ;
+; Allow Register Duplication                                                      ; On                 ; On                 ;
+; Allow Register Retiming                                                         ; On                 ; On                 ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Protected Registers Reported in Synthesis Report                      ; 100                ; 100                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Rows Reported in Synthesis Migration Checks                           ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
+; Disable DSP Negate Inferencing                                                  ; Off                ; Off                ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Enable State Machines Inference                                                 ; On                 ; On                 ;
+; Enable formal verification support during compilation                           ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Synthesis Source Files Read                                                                                                                  ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                         ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+; tp11.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+
+
++--------------------+
+; Synthesis Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Synthesis
+    Info: Version 17.0.0 Build 290 04/26/2017 SJ Pro Edition
+    Info: Processing started: Fri Jul 07 20:40:17 2017
+Info: Command: quartus_syn --read_settings_files=off --write_settings_files=off tp11 -c tp11
+Info: qis_default_flow_script.tcl version: #1
+Info: Initializing Synthesis...
+Info: Project = "tp11"
+Info: Revision = "tp11"
+Info: Analyzing source files
+Error (13411): Verilog HDL syntax error at tp11.v(148) near text endmodule File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 148
+Warning (18454): Verilog HDL warning at tp11.v(151): data object out is already declared File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 151
+Info (17467): Verilog HDL info at tp11.v(34): previous declaration of out is from here File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 34
+Warning (16885): Verilog HDL warning at tp11.v(151): second declaration of out ignored File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 151
+Error (13411): Verilog HDL syntax error at tp11.v(151) near text ) File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 151
+Error (13384): Verilog HDL Module Declaration error at tp11.v(152): explicit port identifier "ck" cannot be used more than once File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 152
+Error (13384): Verilog HDL Module Declaration error at tp11.v(153): explicit port identifier "endereco" cannot be used more than once File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 153
+Error (13384): Verilog HDL Module Declaration error at tp11.v(155): explicit port identifier "out" cannot be used more than once File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 155
+Warning (18454): Verilog HDL warning at tp11.v(156): data object MEM is already declared File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 156
+Info (17467): Verilog HDL info at tp11.v(36): previous declaration of MEM is from here File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 36
+Warning (16885): Verilog HDL warning at tp11.v(156): second declaration of MEM ignored File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 156
+Error (13386): Verilog HDL Procedural Assignment error at tp11.v(129): object "inst75" on left-hand side of assignment must have a variable data type File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 129
+Error (13386): Verilog HDL Procedural Assignment error at tp11.v(131): object "inst23" on left-hand side of assignment must have a variable data type File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 131
+Error (13386): Verilog HDL Procedural Assignment error at tp11.v(132): object "inst01" on left-hand side of assignment must have a variable data type File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 132
+Error (13386): Verilog HDL Procedural Assignment error at tp11.v(135): object "inst75" on left-hand side of assignment must have a variable data type File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 135
+Error (13386): Verilog HDL Procedural Assignment error at tp11.v(138): object "inst20" on left-hand side of assignment must have a variable data type File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 138
+Error (17146): Verilog HDL error at tp11.v(151): f is an unknown type File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 151
+Error (13445): Verilog HDL Module Declaration error at tp11.v(151): top module port "signalite" is not found in the port list File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 151
+Error (13363): Ignored design unit "memoryInst" at tp11.v(188) due to previous errors File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 188
+Error (13363): Ignored design unit "PC" at tp11.v(205) due to previous errors File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 205
+Error (13445): Verilog HDL Module Declaration error at tp11.v(210): top module port "LastBit" is not found in the port list File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 210
+Error (13363): Ignored design unit "Control" at tp11.v(337) due to previous errors File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 337
+Error (13411): Verilog HDL syntax error at tp11.v(355) near text $monitor File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 355
+Error (13363): Ignored design unit "ALU" at tp11.v(356) due to previous errors File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 356
+Error (13363): Ignored design unit "Mux2_1" at tp11.v(371) due to previous errors File: C:/Users/Antonio/Desktop/Nova pasta/tp11/tp11/tp11.v Line: 371
+Error: Flow failed: 
+Error: Quartus Prime Synthesis was unsuccessful. 20 errors, 4 warnings
+    Error: Peak virtual memory: 686 megabytes
+    Error: Processing ended: Fri Jul 07 20:40:41 2017
+    Error: Elapsed time: 00:00:24
+    Error: Total CPU time (on all processors): 00:00:47
+
+

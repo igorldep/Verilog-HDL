@@ -1,0 +1,28 @@
+module somador(a, b, te, ts, saida);
+input a, b, te;
+output ts, saida;
+
+assign saida = a ^ b ^ te;
+assign ts = a & b | a & te | b & te;
+
+endmodule
+
+module somador4bits(A, B, TE0, TS3, S);
+
+input [3:0] A;
+input [3:0] B;
+input TE0;
+output TS3;
+output [3:0] S;
+wire [3:1] TS;
+//Sem TE
+
+somador (A[0], B[0], TE0, TS[0], S[0]);
+somador (A[1], B[1], TS[0], TS[1], S[1]);
+somador (A[2], B[2], TS[1], TS[2], S[2]);
+somador (A[3], B[3], TS[2], TS3, S[3]);
+
+
+module somadorcompleto();
+
+endmodule

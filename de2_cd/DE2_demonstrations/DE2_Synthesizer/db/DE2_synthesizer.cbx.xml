@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="DE2_synthesizer">
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_synthesizer|I2C_AV_Config:u7|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_2901.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

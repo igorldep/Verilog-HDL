@@ -1,0 +1,34 @@
+|mux8
+i0 => i0.IN1
+i1 => i1.IN1
+i2 => i2.IN1
+i3 => i3.IN1
+sela => sela.IN1
+selb => selb.IN2
+s <= muxx:bloco2.port3
+
+
+|mux8|muxx:bloco0
+i0 => s.IN0
+i1 => s.IN0
+sel => s.IN1
+sel => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux8|muxx:bloco1
+i0 => s.IN0
+i1 => s.IN0
+sel => s.IN1
+sel => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux8|muxx:bloco2
+i0 => s.IN0
+i1 => s.IN0
+sel => s.IN1
+sel => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+

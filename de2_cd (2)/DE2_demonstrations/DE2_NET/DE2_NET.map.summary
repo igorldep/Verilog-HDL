@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Jun 22 14:59:34 2007
+Quartus II Version : 7.1 Build 156 04/30/2007 SJ Full Version
+Revision Name : DE2_NET
+Top-level Entity Name : DE2_NET
+Family : Cyclone II
+Total logic elements : 5,409
+    Total combinational functions : 5,409
+    Dedicated logic registers : 3,570
+Total registers : 3570
+Total pins : 429
+Total virtual pins : 0
+Total memory bits : 387,584
+Embedded Multiplier 9-bit elements : 4
+Total PLLs : 2

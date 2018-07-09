@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Aluno/Desktop/Aula 4 - LSD/comparador1.v
+source_file = 1, C:/Users/Aluno/Desktop/Aula 4 - LSD/db/comparador1.cbx.xml
+design_name = comparador1
+instance = comp, \B[0]~I , B[0], comparador1, 1
+instance = comp, \A[0]~I , A[0], comparador1, 1
+instance = comp, \B[1]~I , B[1], comparador1, 1
+instance = comp, \A[1]~I , A[1], comparador1, 1
+instance = comp, \Equal0~0 , Equal0~0, comparador1, 1
+instance = comp, \LessThan0~0 , LessThan0~0, comparador1, 1
+instance = comp, \LessThan1~0 , LessThan1~0, comparador1, 1
+instance = comp, \igual~I , igual, comparador1, 1
+instance = comp, \maior~I , maior, comparador1, 1
+instance = comp, \menor~I , menor, comparador1, 1

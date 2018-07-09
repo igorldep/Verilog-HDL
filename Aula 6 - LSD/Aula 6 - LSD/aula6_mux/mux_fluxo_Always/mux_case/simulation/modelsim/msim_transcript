@@ -1,0 +1,34 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do mux_case_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Aluno/Desktop/Aula\ 5\ -\ LSD/aula5_mux/mux_fluxo_Always/mux_case {C:/Users/Aluno/Desktop/Aula 5 - LSD/aula5_mux/mux_fluxo_Always/mux_case/mux_case.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_case
+# 
+# Top level modules:
+# 	mux_case
+# 
+vsim work.mux_case
+# vsim work.mux_case 
+# Loading work.mux_case
+vsim work.mux_case
+# vsim work.mux_case 
+# Loading work.mux_case
+add wave -position insertpoint  \
+sim:/mux_case/s \
+sim:/mux_case/i0 \
+sim:/mux_case/i1 \
+sim:/mux_case/sel
+force -freeze sim:/mux_case/sel 1 0, 0 {150 ps} -r 300
+force -freeze sim:/mux_case/i0 1 0, 0 {10 ps} -r 20
+force -freeze sim:/mux_case/i1 1 0, 0 {100 ps} -r 200
+run

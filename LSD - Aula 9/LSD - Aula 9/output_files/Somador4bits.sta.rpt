@@ -1,0 +1,1314 @@
+TimeQuest Timing Analyzer report for Somador4bits
+Thu Nov 03 12:12:57 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'SW[0]'
+ 12. Slow Model Hold: 'SW[0]'
+ 13. Slow Model Minimum Pulse Width: 'SW[0]'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'SW[0]'
+ 26. Fast Model Hold: 'SW[0]'
+ 27. Fast Model Minimum Pulse Width: 'SW[0]'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Propagation Delay
+ 33. Minimum Propagation Delay
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Progagation Delay
+ 40. Minimum Progagation Delay
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Somador4bits                                                      ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; SW[0]      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { SW[0] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++---------------------------------------------------------------------+
+; Slow Model Fmax Summary                                             ;
++------------+-----------------+------------+-------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                    ;
++------------+-----------------+------------+-------------------------+
+; 683.99 MHz ; 127.42 MHz      ; SW[0]      ; limit due to hold check ;
++------------+-----------------+------------+-------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; SW[0] ; -0.231 ; -0.285        ;
++-------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Hold Summary        ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; SW[0] ; -3.924 ; -27.081       ;
++-------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; SW[0] ; -1.380 ; -87.752               ;
++-------+--------+-----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'SW[0]'                                                                                                 ;
++--------+-----------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.231 ; SW[0]     ; decodificador:comb_11|saida[5] ; SW[0]        ; SW[0]       ; 0.500        ; 5.874      ; 5.587      ;
+; -0.101 ; SW[0]     ; decodificador:comb_11|saida[5] ; SW[0]        ; SW[0]       ; 0.500        ; 6.004      ; 5.587      ;
+; -0.031 ; SW[0]     ; decodificador:comb_11|saida[6] ; SW[0]        ; SW[0]       ; 0.500        ; 6.078      ; 5.629      ;
+; -0.023 ; SW[0]     ; decodificador:comb_11|saida[0] ; SW[0]        ; SW[0]       ; 0.500        ; 6.073      ; 5.646      ;
+; 0.036  ; SW[0]     ; decodificador:comb_11|saida[3] ; SW[0]        ; SW[0]       ; 0.500        ; 6.074      ; 5.588      ;
+; 0.078  ; SW[0]     ; decodificador:comb_11|saida[1] ; SW[0]        ; SW[0]       ; 0.500        ; 6.073      ; 5.516      ;
+; 0.090  ; SW[0]     ; decodificador:comb_11|saida[2] ; SW[0]        ; SW[0]       ; 0.500        ; 6.074      ; 5.505      ;
+; 0.099  ; SW[0]     ; decodificador:comb_11|saida[6] ; SW[0]        ; SW[0]       ; 0.500        ; 6.208      ; 5.629      ;
+; 0.107  ; SW[0]     ; decodificador:comb_11|saida[0] ; SW[0]        ; SW[0]       ; 0.500        ; 6.203      ; 5.646      ;
+; 0.116  ; SW[0]     ; decodificador:comb_11|saida[4] ; SW[0]        ; SW[0]       ; 0.500        ; 6.072      ; 5.506      ;
+; 0.166  ; SW[0]     ; decodificador:comb_11|saida[3] ; SW[0]        ; SW[0]       ; 0.500        ; 6.204      ; 5.588      ;
+; 0.208  ; SW[0]     ; decodificador:comb_11|saida[1] ; SW[0]        ; SW[0]       ; 0.500        ; 6.203      ; 5.516      ;
+; 0.220  ; SW[0]     ; decodificador:comb_11|saida[2] ; SW[0]        ; SW[0]       ; 0.500        ; 6.204      ; 5.505      ;
+; 0.246  ; SW[0]     ; decodificador:comb_11|saida[4] ; SW[0]        ; SW[0]       ; 0.500        ; 6.202      ; 5.506      ;
+; 0.269  ; SW[0]     ; decodificador:comb_11|saida[5] ; SW[0]        ; SW[0]       ; 1.000        ; 5.874      ; 5.587      ;
+; 0.399  ; SW[0]     ; decodificador:comb_11|saida[5] ; SW[0]        ; SW[0]       ; 1.000        ; 6.004      ; 5.587      ;
+; 0.469  ; SW[0]     ; decodificador:comb_11|saida[6] ; SW[0]        ; SW[0]       ; 1.000        ; 6.078      ; 5.629      ;
+; 0.477  ; SW[0]     ; decodificador:comb_11|saida[0] ; SW[0]        ; SW[0]       ; 1.000        ; 6.073      ; 5.646      ;
+; 0.536  ; SW[0]     ; decodificador:comb_11|saida[3] ; SW[0]        ; SW[0]       ; 1.000        ; 6.074      ; 5.588      ;
+; 0.578  ; SW[0]     ; decodificador:comb_11|saida[1] ; SW[0]        ; SW[0]       ; 1.000        ; 6.073      ; 5.516      ;
+; 0.590  ; SW[0]     ; decodificador:comb_11|saida[2] ; SW[0]        ; SW[0]       ; 1.000        ; 6.074      ; 5.505      ;
+; 0.599  ; SW[0]     ; decodificador:comb_11|saida[6] ; SW[0]        ; SW[0]       ; 1.000        ; 6.208      ; 5.629      ;
+; 0.607  ; SW[0]     ; decodificador:comb_11|saida[0] ; SW[0]        ; SW[0]       ; 1.000        ; 6.203      ; 5.646      ;
+; 0.616  ; SW[0]     ; decodificador:comb_11|saida[4] ; SW[0]        ; SW[0]       ; 1.000        ; 6.072      ; 5.506      ;
+; 0.666  ; SW[0]     ; decodificador:comb_11|saida[3] ; SW[0]        ; SW[0]       ; 1.000        ; 6.204      ; 5.588      ;
+; 0.708  ; SW[0]     ; decodificador:comb_11|saida[1] ; SW[0]        ; SW[0]       ; 1.000        ; 6.203      ; 5.516      ;
+; 0.720  ; SW[0]     ; decodificador:comb_11|saida[2] ; SW[0]        ; SW[0]       ; 1.000        ; 6.204      ; 5.505      ;
+; 0.746  ; SW[0]     ; decodificador:comb_11|saida[4] ; SW[0]        ; SW[0]       ; 1.000        ; 6.202      ; 5.506      ;
++--------+-----------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'SW[0]'                                                                                                  ;
++--------+-----------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.924 ; SW[0]     ; decodificador:comb_11|saida[4] ; SW[0]        ; SW[0]       ; 0.000        ; 7.691      ; 3.767      ;
+; -3.922 ; SW[0]     ; decodificador:comb_11|saida[6] ; SW[0]        ; SW[0]       ; 0.000        ; 7.697      ; 3.775      ;
+; -3.921 ; SW[0]     ; decodificador:comb_11|saida[2] ; SW[0]        ; SW[0]       ; 0.000        ; 7.693      ; 3.772      ;
+; -3.920 ; SW[0]     ; decodificador:comb_11|saida[1] ; SW[0]        ; SW[0]       ; 0.000        ; 7.692      ; 3.772      ;
+; -3.915 ; SW[0]     ; decodificador:comb_11|saida[3] ; SW[0]        ; SW[0]       ; 0.000        ; 7.693      ; 3.778      ;
+; -3.815 ; SW[0]     ; decodificador:comb_11|saida[5] ; SW[0]        ; SW[0]       ; 0.000        ; 7.493      ; 3.678      ;
+; -3.794 ; SW[0]     ; decodificador:comb_11|saida[4] ; SW[0]        ; SW[0]       ; 0.000        ; 7.561      ; 3.767      ;
+; -3.792 ; SW[0]     ; decodificador:comb_11|saida[6] ; SW[0]        ; SW[0]       ; 0.000        ; 7.567      ; 3.775      ;
+; -3.791 ; SW[0]     ; decodificador:comb_11|saida[2] ; SW[0]        ; SW[0]       ; 0.000        ; 7.563      ; 3.772      ;
+; -3.790 ; SW[0]     ; decodificador:comb_11|saida[1] ; SW[0]        ; SW[0]       ; 0.000        ; 7.562      ; 3.772      ;
+; -3.785 ; SW[0]     ; decodificador:comb_11|saida[3] ; SW[0]        ; SW[0]       ; 0.000        ; 7.563      ; 3.778      ;
+; -3.685 ; SW[0]     ; decodificador:comb_11|saida[5] ; SW[0]        ; SW[0]       ; 0.000        ; 7.363      ; 3.678      ;
+; -3.664 ; SW[0]     ; decodificador:comb_11|saida[0] ; SW[0]        ; SW[0]       ; 0.000        ; 7.692      ; 4.028      ;
+; -3.534 ; SW[0]     ; decodificador:comb_11|saida[0] ; SW[0]        ; SW[0]       ; 0.000        ; 7.562      ; 4.028      ;
+; -3.424 ; SW[0]     ; decodificador:comb_11|saida[4] ; SW[0]        ; SW[0]       ; -0.500       ; 7.691      ; 3.767      ;
+; -3.422 ; SW[0]     ; decodificador:comb_11|saida[6] ; SW[0]        ; SW[0]       ; -0.500       ; 7.697      ; 3.775      ;
+; -3.421 ; SW[0]     ; decodificador:comb_11|saida[2] ; SW[0]        ; SW[0]       ; -0.500       ; 7.693      ; 3.772      ;
+; -3.420 ; SW[0]     ; decodificador:comb_11|saida[1] ; SW[0]        ; SW[0]       ; -0.500       ; 7.692      ; 3.772      ;
+; -3.415 ; SW[0]     ; decodificador:comb_11|saida[3] ; SW[0]        ; SW[0]       ; -0.500       ; 7.693      ; 3.778      ;
+; -3.315 ; SW[0]     ; decodificador:comb_11|saida[5] ; SW[0]        ; SW[0]       ; -0.500       ; 7.493      ; 3.678      ;
+; -3.294 ; SW[0]     ; decodificador:comb_11|saida[4] ; SW[0]        ; SW[0]       ; -0.500       ; 7.561      ; 3.767      ;
+; -3.292 ; SW[0]     ; decodificador:comb_11|saida[6] ; SW[0]        ; SW[0]       ; -0.500       ; 7.567      ; 3.775      ;
+; -3.291 ; SW[0]     ; decodificador:comb_11|saida[2] ; SW[0]        ; SW[0]       ; -0.500       ; 7.563      ; 3.772      ;
+; -3.290 ; SW[0]     ; decodificador:comb_11|saida[1] ; SW[0]        ; SW[0]       ; -0.500       ; 7.562      ; 3.772      ;
+; -3.285 ; SW[0]     ; decodificador:comb_11|saida[3] ; SW[0]        ; SW[0]       ; -0.500       ; 7.563      ; 3.778      ;
+; -3.185 ; SW[0]     ; decodificador:comb_11|saida[5] ; SW[0]        ; SW[0]       ; -0.500       ; 7.363      ; 3.678      ;
+; -3.164 ; SW[0]     ; decodificador:comb_11|saida[0] ; SW[0]        ; SW[0]       ; -0.500       ; 7.692      ; 4.028      ;
+; -3.034 ; SW[0]     ; decodificador:comb_11|saida[0] ; SW[0]        ; SW[0]       ; -0.500       ; 7.562      ; 4.028      ;
++--------+-----------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'SW[0]'                                                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; SW[0] ; Rise       ; SW[0]                                                                 ;
+; -1.119 ; -1.119       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|Mux7~0clkctrl|inclk[0]                                        ;
+; -1.119 ; -1.119       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|Mux7~0clkctrl|inclk[0]                                        ;
+; -1.119 ; -1.119       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|Mux7~0clkctrl|outclk                                          ;
+; -1.119 ; -1.119       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|Mux7~0clkctrl|outclk                                          ;
+; -1.119 ; -1.119       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|Mux7~0|combout                                                ;
+; -1.119 ; -1.119       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|Mux7~0|combout                                                ;
+; -1.119 ; -1.119       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|saida[0]|datac                                                ;
+; -1.119 ; -1.119       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|saida[0]|datac                                                ;
+; -1.119 ; -1.119       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|saida[1]|datac                                                ;
+; -1.119 ; -1.119       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|saida[1]|datac                                                ;
+; -1.119 ; -1.119       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|saida[2]|datac                                                ;
+; -1.119 ; -1.119       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|saida[2]|datac                                                ;
+; -1.119 ; -1.119       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|saida[3]|datac                                                ;
+; -1.119 ; -1.119       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|saida[3]|datac                                                ;
+; -1.119 ; -1.119       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|saida[4]|datac                                                ;
+; -1.119 ; -1.119       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|saida[4]|datac                                                ;
+; -1.119 ; -1.119       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|saida[5]|datad                                                ;
+; -1.119 ; -1.119       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|saida[5]|datad                                                ;
+; -1.119 ; -1.119       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|saida[6]|datac                                                ;
+; -1.119 ; -1.119       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|saida[6]|datac                                                ;
+; -1.119 ; -1.119       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; decodificador:comb_11|saida[0]                                        ;
+; -1.119 ; -1.119       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; decodificador:comb_11|saida[0]                                        ;
+; -1.119 ; -1.119       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; decodificador:comb_11|saida[1]                                        ;
+; -1.119 ; -1.119       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; decodificador:comb_11|saida[1]                                        ;
+; -1.119 ; -1.119       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; decodificador:comb_11|saida[2]                                        ;
+; -1.119 ; -1.119       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; decodificador:comb_11|saida[2]                                        ;
+; -1.119 ; -1.119       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; decodificador:comb_11|saida[3]                                        ;
+; -1.119 ; -1.119       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; decodificador:comb_11|saida[3]                                        ;
+; -1.119 ; -1.119       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; decodificador:comb_11|saida[4]                                        ;
+; -1.119 ; -1.119       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; decodificador:comb_11|saida[4]                                        ;
+; -1.119 ; -1.119       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; decodificador:comb_11|saida[5]                                        ;
+; -1.119 ; -1.119       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; decodificador:comb_11|saida[5]                                        ;
+; -1.119 ; -1.119       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; decodificador:comb_11|saida[6]                                        ;
+; -1.119 ; -1.119       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; decodificador:comb_11|saida[6]                                        ;
+; -1.108 ; -1.108       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|StageOut[31]~0|combout            ;
+; -1.108 ; -1.108       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|StageOut[31]~0|combout            ;
+; -1.108 ; -1.108       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|Mux7~0|datac                                                  ;
+; -1.108 ; -1.108       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|Mux7~0|datac                                                  ;
+; -0.977 ; -0.977       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|StageOut[32]~1|combout            ;
+; -0.977 ; -0.977       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|StageOut[32]~1|combout            ;
+; -0.977 ; -0.977       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|Mux7~0|datad                                                  ;
+; -0.977 ; -0.977       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|Mux7~0|datad                                                  ;
+; -0.859 ; -0.859       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|Mux7~0clkctrl|inclk[0]                                        ;
+; -0.859 ; -0.859       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|Mux7~0clkctrl|inclk[0]                                        ;
+; -0.859 ; -0.859       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|Mux7~0clkctrl|outclk                                          ;
+; -0.859 ; -0.859       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|Mux7~0clkctrl|outclk                                          ;
+; -0.859 ; -0.859       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|Mux7~0|combout                                                ;
+; -0.859 ; -0.859       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|Mux7~0|combout                                                ;
+; -0.859 ; -0.859       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|saida[0]|datac                                                ;
+; -0.859 ; -0.859       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|saida[0]|datac                                                ;
+; -0.859 ; -0.859       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|saida[1]|datac                                                ;
+; -0.859 ; -0.859       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|saida[1]|datac                                                ;
+; -0.859 ; -0.859       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|saida[2]|datac                                                ;
+; -0.859 ; -0.859       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|saida[2]|datac                                                ;
+; -0.859 ; -0.859       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|saida[3]|datac                                                ;
+; -0.859 ; -0.859       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|saida[3]|datac                                                ;
+; -0.859 ; -0.859       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|saida[4]|datac                                                ;
+; -0.859 ; -0.859       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|saida[4]|datac                                                ;
+; -0.859 ; -0.859       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|saida[5]|datad                                                ;
+; -0.859 ; -0.859       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|saida[5]|datad                                                ;
+; -0.859 ; -0.859       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|saida[6]|datac                                                ;
+; -0.859 ; -0.859       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|saida[6]|datac                                                ;
+; -0.859 ; -0.859       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; decodificador:comb_11|saida[0]                                        ;
+; -0.859 ; -0.859       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; decodificador:comb_11|saida[0]                                        ;
+; -0.859 ; -0.859       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; decodificador:comb_11|saida[1]                                        ;
+; -0.859 ; -0.859       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; decodificador:comb_11|saida[1]                                        ;
+; -0.859 ; -0.859       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; decodificador:comb_11|saida[2]                                        ;
+; -0.859 ; -0.859       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; decodificador:comb_11|saida[2]                                        ;
+; -0.859 ; -0.859       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; decodificador:comb_11|saida[3]                                        ;
+; -0.859 ; -0.859       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; decodificador:comb_11|saida[3]                                        ;
+; -0.859 ; -0.859       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; decodificador:comb_11|saida[4]                                        ;
+; -0.859 ; -0.859       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; decodificador:comb_11|saida[4]                                        ;
+; -0.859 ; -0.859       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; decodificador:comb_11|saida[5]                                        ;
+; -0.859 ; -0.859       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; decodificador:comb_11|saida[5]                                        ;
+; -0.859 ; -0.859       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; decodificador:comb_11|saida[6]                                        ;
+; -0.859 ; -0.859       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; decodificador:comb_11|saida[6]                                        ;
+; -0.848 ; -0.848       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; Mod2|auto_generated|divider|divider|StageOut[31]~0|combout            ;
+; -0.848 ; -0.848       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; Mod2|auto_generated|divider|divider|StageOut[31]~0|combout            ;
+; -0.848 ; -0.848       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|Mux7~0|datac                                                  ;
+; -0.848 ; -0.848       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|Mux7~0|datac                                                  ;
+; -0.717 ; -0.717       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; Mod2|auto_generated|divider|divider|StageOut[32]~1|combout            ;
+; -0.717 ; -0.717       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; Mod2|auto_generated|divider|divider|StageOut[32]~1|combout            ;
+; -0.717 ; -0.717       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|Mux7~0|datad                                                  ;
+; -0.717 ; -0.717       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|Mux7~0|datad                                                  ;
+; -0.693 ; -0.693       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|StageOut[33]~2|combout            ;
+; -0.693 ; -0.693       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|StageOut[33]~2|combout            ;
+; -0.693 ; -0.693       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|Mux7~0|datab                                                  ;
+; -0.693 ; -0.693       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|Mux7~0|datab                                                  ;
+; -0.433 ; -0.433       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; Mod2|auto_generated|divider|divider|StageOut[33]~2|combout            ;
+; -0.433 ; -0.433       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; Mod2|auto_generated|divider|divider|StageOut[33]~2|combout            ;
+; -0.433 ; -0.433       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|Mux7~0|datab                                                  ;
+; -0.433 ; -0.433       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|Mux7~0|datab                                                  ;
+; -0.004 ; -0.004       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|StageOut[33]~2|datad              ;
+; -0.004 ; -0.004       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|StageOut[33]~2|datad              ;
+; -0.004 ; -0.004       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|add_sub_6_result_int[3]~4|combout ;
+; -0.004 ; -0.004       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|add_sub_6_result_int[3]~4|combout ;
+; 0.170  ; 0.170        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; Mod2|auto_generated|divider|divider|StageOut[31]~0|datac              ;
+; 0.170  ; 0.170        ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|StageOut[31]~0|datac              ;
+; 0.170  ; 0.170        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; Mod2|auto_generated|divider|divider|StageOut[31]~0|datac              ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; SW[0]      ; 7.257 ; 7.257 ; Rise       ; SW[0]           ;
+;  SW[0]    ; SW[0]      ; 0.601 ; 0.601 ; Rise       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; 0.242 ; 0.242 ; Rise       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; 0.033 ; 0.033 ; Rise       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; 2.806 ; 2.806 ; Rise       ; SW[0]           ;
+;  SW[10]   ; SW[0]      ; 2.107 ; 2.107 ; Rise       ; SW[0]           ;
+;  SW[14]   ; SW[0]      ; 6.672 ; 6.672 ; Rise       ; SW[0]           ;
+;  SW[15]   ; SW[0]      ; 6.121 ; 6.121 ; Rise       ; SW[0]           ;
+;  SW[16]   ; SW[0]      ; 5.601 ; 5.601 ; Rise       ; SW[0]           ;
+;  SW[17]   ; SW[0]      ; 7.257 ; 7.257 ; Rise       ; SW[0]           ;
+; SW[*]     ; SW[0]      ; 7.387 ; 7.387 ; Fall       ; SW[0]           ;
+;  SW[0]    ; SW[0]      ; 0.731 ; 0.731 ; Fall       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; 0.372 ; 0.372 ; Fall       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; 0.163 ; 0.163 ; Fall       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; 2.936 ; 2.936 ; Fall       ; SW[0]           ;
+;  SW[10]   ; SW[0]      ; 2.237 ; 2.237 ; Fall       ; SW[0]           ;
+;  SW[14]   ; SW[0]      ; 6.802 ; 6.802 ; Fall       ; SW[0]           ;
+;  SW[15]   ; SW[0]      ; 6.251 ; 6.251 ; Fall       ; SW[0]           ;
+;  SW[16]   ; SW[0]      ; 5.731 ; 5.731 ; Fall       ; SW[0]           ;
+;  SW[17]   ; SW[0]      ; 7.387 ; 7.387 ; Fall       ; SW[0]           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; SW[0]      ; 4.029  ; 4.029  ; Rise       ; SW[0]           ;
+;  SW[0]    ; SW[0]      ; 3.794  ; 3.794  ; Rise       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; 4.029  ; 4.029  ; Rise       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; 3.975  ; 3.975  ; Rise       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; 1.003  ; 1.003  ; Rise       ; SW[0]           ;
+;  SW[10]   ; SW[0]      ; 2.288  ; 2.288  ; Rise       ; SW[0]           ;
+;  SW[14]   ; SW[0]      ; -0.821 ; -0.821 ; Rise       ; SW[0]           ;
+;  SW[15]   ; SW[0]      ; -1.851 ; -1.851 ; Rise       ; SW[0]           ;
+;  SW[16]   ; SW[0]      ; -1.593 ; -1.593 ; Rise       ; SW[0]           ;
+;  SW[17]   ; SW[0]      ; -3.448 ; -3.448 ; Rise       ; SW[0]           ;
+; SW[*]     ; SW[0]      ; 4.159  ; 4.159  ; Fall       ; SW[0]           ;
+;  SW[0]    ; SW[0]      ; 3.924  ; 3.924  ; Fall       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; 4.159  ; 4.159  ; Fall       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; 4.105  ; 4.105  ; Fall       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; 1.133  ; 1.133  ; Fall       ; SW[0]           ;
+;  SW[10]   ; SW[0]      ; 2.418  ; 2.418  ; Fall       ; SW[0]           ;
+;  SW[14]   ; SW[0]      ; -0.691 ; -0.691 ; Fall       ; SW[0]           ;
+;  SW[15]   ; SW[0]      ; -1.721 ; -1.721 ; Fall       ; SW[0]           ;
+;  SW[16]   ; SW[0]      ; -1.463 ; -1.463 ; Fall       ; SW[0]           ;
+;  SW[17]   ; SW[0]      ; -3.318 ; -3.318 ; Fall       ; SW[0]           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; SW[0]      ; 15.235 ; 15.235 ; Rise       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 15.235 ; 15.235 ; Rise       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 13.924 ; 13.924 ; Rise       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 13.889 ; 13.889 ; Rise       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 13.642 ; 13.642 ; Rise       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 13.225 ; 13.225 ; Rise       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 12.978 ; 12.978 ; Rise       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 14.039 ; 14.039 ; Rise       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 8.485  ; 8.485  ; Rise       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 8.485  ; 8.485  ; Rise       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 8.313  ; 8.313  ; Rise       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 8.333  ; 8.333  ; Rise       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 8.310  ; 8.310  ; Rise       ; SW[0]           ;
+; HEX0[*]   ; SW[0]      ; 15.365 ; 15.365 ; Fall       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 15.365 ; 15.365 ; Fall       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 14.054 ; 14.054 ; Fall       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 14.019 ; 14.019 ; Fall       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 13.772 ; 13.772 ; Fall       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 13.355 ; 13.355 ; Fall       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 13.108 ; 13.108 ; Fall       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 14.169 ; 14.169 ; Fall       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 8.485  ; 8.485  ; Fall       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 8.485  ; 8.485  ; Fall       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 8.313  ; 8.313  ; Fall       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 8.333  ; 8.333  ; Fall       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 8.310  ; 8.310  ; Fall       ; SW[0]           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; SW[0]      ; 11.619 ; 11.619 ; Rise       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 13.876 ; 13.876 ; Rise       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 12.565 ; 12.565 ; Rise       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 12.530 ; 12.530 ; Rise       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 12.283 ; 12.283 ; Rise       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 11.866 ; 11.866 ; Rise       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 11.619 ; 11.619 ; Rise       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 12.680 ; 12.680 ; Rise       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 7.851  ; 7.851  ; Rise       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 8.026  ; 8.026  ; Rise       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 7.854  ; 7.854  ; Rise       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 7.874  ; 7.874  ; Rise       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 7.851  ; 7.851  ; Rise       ; SW[0]           ;
+; HEX0[*]   ; SW[0]      ; 11.489 ; 11.489 ; Fall       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 13.746 ; 13.746 ; Fall       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 12.435 ; 12.435 ; Fall       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 12.400 ; 12.400 ; Fall       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 12.153 ; 12.153 ; Fall       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 11.736 ; 11.736 ; Fall       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 11.489 ; 11.489 ; Fall       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 12.550 ; 12.550 ; Fall       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 7.851  ; 7.851  ; Fall       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 8.026  ; 8.026  ; Fall       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 7.854  ; 7.854  ; Fall       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 7.874  ; 7.874  ; Fall       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 7.851  ; 7.851  ; Fall       ; SW[0]           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; SW[1]      ; HEX1[0]     ; 8.126  ; 8.126  ; 8.126  ; 8.126  ;
+; SW[1]      ; HEX1[3]     ; 7.954  ; 7.954  ; 7.954  ; 7.954  ;
+; SW[1]      ; HEX1[4]     ; 7.974  ; 7.974  ; 7.974  ; 7.974  ;
+; SW[1]      ; HEX1[5]     ; 7.951  ; 7.951  ; 7.951  ; 7.951  ;
+; SW[2]      ; HEX1[0]     ; 7.917  ; 7.917  ; 7.917  ; 7.917  ;
+; SW[2]      ; HEX1[3]     ; 7.745  ; 7.745  ; 7.745  ; 7.745  ;
+; SW[2]      ; HEX1[4]     ; 7.765  ; 7.765  ; 7.765  ; 7.765  ;
+; SW[2]      ; HEX1[5]     ; 7.742  ; 7.742  ; 7.742  ; 7.742  ;
+; SW[3]      ; HEX1[0]     ; 10.684 ; 10.684 ; 10.684 ; 10.684 ;
+; SW[3]      ; HEX1[3]     ; 10.512 ; 10.512 ; 10.512 ; 10.512 ;
+; SW[3]      ; HEX1[4]     ; 10.532 ; 10.532 ; 10.532 ; 10.532 ;
+; SW[3]      ; HEX1[5]     ; 10.509 ; 10.509 ; 10.509 ; 10.509 ;
+; SW[10]     ; HEX1[0]     ; 9.991  ; 9.991  ; 9.991  ; 9.991  ;
+; SW[10]     ; HEX1[3]     ; 9.819  ; 9.819  ; 9.819  ; 9.819  ;
+; SW[10]     ; HEX1[4]     ; 9.839  ; 9.839  ; 9.839  ; 9.839  ;
+; SW[10]     ; HEX1[5]     ; 9.816  ; 9.816  ; 9.816  ; 9.816  ;
+; SW[14]     ; HEX1[0]     ; 14.556 ; 14.556 ; 14.556 ; 14.556 ;
+; SW[14]     ; HEX1[3]     ; 14.384 ; 14.384 ; 14.384 ; 14.384 ;
+; SW[14]     ; HEX1[4]     ; 14.404 ; 14.404 ; 14.404 ; 14.404 ;
+; SW[14]     ; HEX1[5]     ; 14.381 ; 14.381 ; 14.381 ; 14.381 ;
+; SW[15]     ; HEX1[0]     ; 14.005 ; 14.005 ; 14.005 ; 14.005 ;
+; SW[15]     ; HEX1[3]     ; 13.833 ; 13.833 ; 13.833 ; 13.833 ;
+; SW[15]     ; HEX1[4]     ; 13.853 ; 13.853 ; 13.853 ; 13.853 ;
+; SW[15]     ; HEX1[5]     ; 13.830 ; 13.830 ; 13.830 ; 13.830 ;
+; SW[16]     ; HEX1[0]     ; 13.485 ; 13.485 ; 13.485 ; 13.485 ;
+; SW[16]     ; HEX1[3]     ; 13.313 ; 13.313 ; 13.313 ; 13.313 ;
+; SW[16]     ; HEX1[4]     ; 13.333 ; 13.333 ; 13.333 ; 13.333 ;
+; SW[16]     ; HEX1[5]     ; 13.310 ; 13.310 ; 13.310 ; 13.310 ;
+; SW[17]     ; HEX1[0]     ; 15.135 ; 15.135 ; 15.135 ; 15.135 ;
+; SW[17]     ; HEX1[3]     ; 14.963 ; 14.963 ; 14.963 ; 14.963 ;
+; SW[17]     ; HEX1[4]     ; 14.983 ; 14.983 ; 14.983 ; 14.983 ;
+; SW[17]     ; HEX1[5]     ; 14.960 ; 14.960 ; 14.960 ; 14.960 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------+
+; Minimum Propagation Delay                                    ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; SW[1]      ; HEX1[0]     ; 7.791  ; 7.791  ; 7.791  ; 7.791  ;
+; SW[1]      ; HEX1[3]     ; 7.619  ; 7.619  ; 7.619  ; 7.619  ;
+; SW[1]      ; HEX1[4]     ; 7.639  ; 7.639  ; 7.639  ; 7.639  ;
+; SW[1]      ; HEX1[5]     ; 7.616  ; 7.616  ; 7.616  ; 7.616  ;
+; SW[2]      ; HEX1[0]     ; 7.848  ; 7.848  ; 7.848  ; 7.848  ;
+; SW[2]      ; HEX1[3]     ; 7.676  ; 7.676  ; 7.676  ; 7.676  ;
+; SW[2]      ; HEX1[4]     ; 7.696  ; 7.696  ; 7.696  ; 7.696  ;
+; SW[2]      ; HEX1[5]     ; 7.673  ; 7.673  ; 7.673  ; 7.673  ;
+; SW[3]      ; HEX1[0]     ; 10.684 ; 10.684 ; 10.684 ; 10.684 ;
+; SW[3]      ; HEX1[3]     ; 10.512 ; 10.512 ; 10.512 ; 10.512 ;
+; SW[3]      ; HEX1[4]     ; 10.532 ; 10.532 ; 10.532 ; 10.532 ;
+; SW[3]      ; HEX1[5]     ; 10.509 ; 10.509 ; 10.509 ; 10.509 ;
+; SW[10]     ; HEX1[0]     ; 9.532  ; 9.532  ; 9.532  ; 9.532  ;
+; SW[10]     ; HEX1[3]     ; 9.360  ; 9.360  ; 9.360  ; 9.360  ;
+; SW[10]     ; HEX1[4]     ; 9.380  ; 9.380  ; 9.380  ; 9.380  ;
+; SW[10]     ; HEX1[5]     ; 9.357  ; 9.357  ; 9.357  ; 9.357  ;
+; SW[14]     ; HEX1[0]     ; 14.227 ; 14.227 ; 14.227 ; 14.227 ;
+; SW[14]     ; HEX1[3]     ; 14.055 ; 14.055 ; 14.055 ; 14.055 ;
+; SW[14]     ; HEX1[4]     ; 14.075 ; 14.075 ; 14.075 ; 14.075 ;
+; SW[14]     ; HEX1[5]     ; 14.052 ; 14.052 ; 14.052 ; 14.052 ;
+; SW[15]     ; HEX1[0]     ; 13.671 ; 13.671 ; 13.671 ; 13.671 ;
+; SW[15]     ; HEX1[3]     ; 13.499 ; 13.499 ; 13.499 ; 13.499 ;
+; SW[15]     ; HEX1[4]     ; 13.519 ; 13.519 ; 13.519 ; 13.519 ;
+; SW[15]     ; HEX1[5]     ; 13.496 ; 13.496 ; 13.496 ; 13.496 ;
+; SW[16]     ; HEX1[0]     ; 13.417 ; 13.417 ; 13.417 ; 13.417 ;
+; SW[16]     ; HEX1[3]     ; 13.245 ; 13.245 ; 13.245 ; 13.245 ;
+; SW[16]     ; HEX1[4]     ; 13.265 ; 13.265 ; 13.265 ; 13.265 ;
+; SW[16]     ; HEX1[5]     ; 13.242 ; 13.242 ; 13.242 ; 13.242 ;
+; SW[17]     ; HEX1[0]     ; 15.135 ; 15.135 ; 15.135 ; 15.135 ;
+; SW[17]     ; HEX1[3]     ; 14.963 ; 14.963 ; 14.963 ; 14.963 ;
+; SW[17]     ; HEX1[4]     ; 14.983 ; 14.983 ; 14.983 ; 14.983 ;
+; SW[17]     ; HEX1[5]     ; 14.960 ; 14.960 ; 14.960 ; 14.960 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++-------------------------------+
+; Fast Model Setup Summary      ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; SW[0] ; 0.548 ; 0.000         ;
++-------+-------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; SW[0] ; -1.958 ; -13.537       ;
++-------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; SW[0] ; -1.380 ; -10.008               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'SW[0]'                                                                                                ;
++-------+-----------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.548 ; SW[0]     ; decodificador:comb_11|saida[5] ; SW[0]        ; SW[0]       ; 0.500        ; 2.958      ; 2.480      ;
+; 0.596 ; SW[0]     ; decodificador:comb_11|saida[5] ; SW[0]        ; SW[0]       ; 0.500        ; 3.006      ; 2.480      ;
+; 0.619 ; SW[0]     ; decodificador:comb_11|saida[0] ; SW[0]        ; SW[0]       ; 0.500        ; 3.053      ; 2.542      ;
+; 0.640 ; SW[0]     ; decodificador:comb_11|saida[6] ; SW[0]        ; SW[0]       ; 0.500        ; 3.053      ; 2.507      ;
+; 0.648 ; SW[0]     ; decodificador:comb_11|saida[1] ; SW[0]        ; SW[0]       ; 0.500        ; 3.052      ; 2.504      ;
+; 0.649 ; SW[0]     ; decodificador:comb_11|saida[3] ; SW[0]        ; SW[0]       ; 0.500        ; 3.053      ; 2.513      ;
+; 0.658 ; SW[0]     ; decodificador:comb_11|saida[2] ; SW[0]        ; SW[0]       ; 0.500        ; 3.053      ; 2.495      ;
+; 0.659 ; SW[0]     ; decodificador:comb_11|saida[4] ; SW[0]        ; SW[0]       ; 0.500        ; 3.051      ; 2.500      ;
+; 0.667 ; SW[0]     ; decodificador:comb_11|saida[0] ; SW[0]        ; SW[0]       ; 0.500        ; 3.101      ; 2.542      ;
+; 0.688 ; SW[0]     ; decodificador:comb_11|saida[6] ; SW[0]        ; SW[0]       ; 0.500        ; 3.101      ; 2.507      ;
+; 0.696 ; SW[0]     ; decodificador:comb_11|saida[1] ; SW[0]        ; SW[0]       ; 0.500        ; 3.100      ; 2.504      ;
+; 0.697 ; SW[0]     ; decodificador:comb_11|saida[3] ; SW[0]        ; SW[0]       ; 0.500        ; 3.101      ; 2.513      ;
+; 0.706 ; SW[0]     ; decodificador:comb_11|saida[2] ; SW[0]        ; SW[0]       ; 0.500        ; 3.101      ; 2.495      ;
+; 0.707 ; SW[0]     ; decodificador:comb_11|saida[4] ; SW[0]        ; SW[0]       ; 0.500        ; 3.099      ; 2.500      ;
+; 1.048 ; SW[0]     ; decodificador:comb_11|saida[5] ; SW[0]        ; SW[0]       ; 1.000        ; 2.958      ; 2.480      ;
+; 1.096 ; SW[0]     ; decodificador:comb_11|saida[5] ; SW[0]        ; SW[0]       ; 1.000        ; 3.006      ; 2.480      ;
+; 1.119 ; SW[0]     ; decodificador:comb_11|saida[0] ; SW[0]        ; SW[0]       ; 1.000        ; 3.053      ; 2.542      ;
+; 1.140 ; SW[0]     ; decodificador:comb_11|saida[6] ; SW[0]        ; SW[0]       ; 1.000        ; 3.053      ; 2.507      ;
+; 1.148 ; SW[0]     ; decodificador:comb_11|saida[1] ; SW[0]        ; SW[0]       ; 1.000        ; 3.052      ; 2.504      ;
+; 1.149 ; SW[0]     ; decodificador:comb_11|saida[3] ; SW[0]        ; SW[0]       ; 1.000        ; 3.053      ; 2.513      ;
+; 1.158 ; SW[0]     ; decodificador:comb_11|saida[2] ; SW[0]        ; SW[0]       ; 1.000        ; 3.053      ; 2.495      ;
+; 1.159 ; SW[0]     ; decodificador:comb_11|saida[4] ; SW[0]        ; SW[0]       ; 1.000        ; 3.051      ; 2.500      ;
+; 1.167 ; SW[0]     ; decodificador:comb_11|saida[0] ; SW[0]        ; SW[0]       ; 1.000        ; 3.101      ; 2.542      ;
+; 1.188 ; SW[0]     ; decodificador:comb_11|saida[6] ; SW[0]        ; SW[0]       ; 1.000        ; 3.101      ; 2.507      ;
+; 1.196 ; SW[0]     ; decodificador:comb_11|saida[1] ; SW[0]        ; SW[0]       ; 1.000        ; 3.100      ; 2.504      ;
+; 1.197 ; SW[0]     ; decodificador:comb_11|saida[3] ; SW[0]        ; SW[0]       ; 1.000        ; 3.101      ; 2.513      ;
+; 1.206 ; SW[0]     ; decodificador:comb_11|saida[2] ; SW[0]        ; SW[0]       ; 1.000        ; 3.101      ; 2.495      ;
+; 1.207 ; SW[0]     ; decodificador:comb_11|saida[4] ; SW[0]        ; SW[0]       ; 1.000        ; 3.099      ; 2.500      ;
++-------+-----------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'SW[0]'                                                                                                  ;
++--------+-----------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.958 ; SW[0]     ; decodificador:comb_11|saida[4] ; SW[0]        ; SW[0]       ; 0.000        ; 3.707      ; 1.749      ;
+; -1.958 ; SW[0]     ; decodificador:comb_11|saida[1] ; SW[0]        ; SW[0]       ; 0.000        ; 3.708      ; 1.750      ;
+; -1.956 ; SW[0]     ; decodificador:comb_11|saida[2] ; SW[0]        ; SW[0]       ; 0.000        ; 3.709      ; 1.753      ;
+; -1.953 ; SW[0]     ; decodificador:comb_11|saida[6] ; SW[0]        ; SW[0]       ; 0.000        ; 3.709      ; 1.756      ;
+; -1.950 ; SW[0]     ; decodificador:comb_11|saida[3] ; SW[0]        ; SW[0]       ; 0.000        ; 3.709      ; 1.759      ;
+; -1.912 ; SW[0]     ; decodificador:comb_11|saida[5] ; SW[0]        ; SW[0]       ; 0.000        ; 3.614      ; 1.702      ;
+; -1.910 ; SW[0]     ; decodificador:comb_11|saida[4] ; SW[0]        ; SW[0]       ; 0.000        ; 3.659      ; 1.749      ;
+; -1.910 ; SW[0]     ; decodificador:comb_11|saida[1] ; SW[0]        ; SW[0]       ; 0.000        ; 3.660      ; 1.750      ;
+; -1.908 ; SW[0]     ; decodificador:comb_11|saida[2] ; SW[0]        ; SW[0]       ; 0.000        ; 3.661      ; 1.753      ;
+; -1.905 ; SW[0]     ; decodificador:comb_11|saida[6] ; SW[0]        ; SW[0]       ; 0.000        ; 3.661      ; 1.756      ;
+; -1.902 ; SW[0]     ; decodificador:comb_11|saida[3] ; SW[0]        ; SW[0]       ; 0.000        ; 3.661      ; 1.759      ;
+; -1.864 ; SW[0]     ; decodificador:comb_11|saida[5] ; SW[0]        ; SW[0]       ; 0.000        ; 3.566      ; 1.702      ;
+; -1.850 ; SW[0]     ; decodificador:comb_11|saida[0] ; SW[0]        ; SW[0]       ; 0.000        ; 3.709      ; 1.859      ;
+; -1.802 ; SW[0]     ; decodificador:comb_11|saida[0] ; SW[0]        ; SW[0]       ; 0.000        ; 3.661      ; 1.859      ;
+; -1.458 ; SW[0]     ; decodificador:comb_11|saida[4] ; SW[0]        ; SW[0]       ; -0.500       ; 3.707      ; 1.749      ;
+; -1.458 ; SW[0]     ; decodificador:comb_11|saida[1] ; SW[0]        ; SW[0]       ; -0.500       ; 3.708      ; 1.750      ;
+; -1.456 ; SW[0]     ; decodificador:comb_11|saida[2] ; SW[0]        ; SW[0]       ; -0.500       ; 3.709      ; 1.753      ;
+; -1.453 ; SW[0]     ; decodificador:comb_11|saida[6] ; SW[0]        ; SW[0]       ; -0.500       ; 3.709      ; 1.756      ;
+; -1.450 ; SW[0]     ; decodificador:comb_11|saida[3] ; SW[0]        ; SW[0]       ; -0.500       ; 3.709      ; 1.759      ;
+; -1.412 ; SW[0]     ; decodificador:comb_11|saida[5] ; SW[0]        ; SW[0]       ; -0.500       ; 3.614      ; 1.702      ;
+; -1.410 ; SW[0]     ; decodificador:comb_11|saida[4] ; SW[0]        ; SW[0]       ; -0.500       ; 3.659      ; 1.749      ;
+; -1.410 ; SW[0]     ; decodificador:comb_11|saida[1] ; SW[0]        ; SW[0]       ; -0.500       ; 3.660      ; 1.750      ;
+; -1.408 ; SW[0]     ; decodificador:comb_11|saida[2] ; SW[0]        ; SW[0]       ; -0.500       ; 3.661      ; 1.753      ;
+; -1.405 ; SW[0]     ; decodificador:comb_11|saida[6] ; SW[0]        ; SW[0]       ; -0.500       ; 3.661      ; 1.756      ;
+; -1.402 ; SW[0]     ; decodificador:comb_11|saida[3] ; SW[0]        ; SW[0]       ; -0.500       ; 3.661      ; 1.759      ;
+; -1.364 ; SW[0]     ; decodificador:comb_11|saida[5] ; SW[0]        ; SW[0]       ; -0.500       ; 3.566      ; 1.702      ;
+; -1.350 ; SW[0]     ; decodificador:comb_11|saida[0] ; SW[0]        ; SW[0]       ; -0.500       ; 3.709      ; 1.859      ;
+; -1.302 ; SW[0]     ; decodificador:comb_11|saida[0] ; SW[0]        ; SW[0]       ; -0.500       ; 3.661      ; 1.859      ;
++--------+-----------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'SW[0]'                                                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; SW[0] ; Rise       ; SW[0]                                                                 ;
+; -0.156 ; -0.156       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|Mux7~0clkctrl|inclk[0]                                        ;
+; -0.156 ; -0.156       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|Mux7~0clkctrl|inclk[0]                                        ;
+; -0.156 ; -0.156       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|Mux7~0clkctrl|outclk                                          ;
+; -0.156 ; -0.156       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|Mux7~0clkctrl|outclk                                          ;
+; -0.156 ; -0.156       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|Mux7~0|combout                                                ;
+; -0.156 ; -0.156       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|Mux7~0|combout                                                ;
+; -0.156 ; -0.156       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|saida[0]|datac                                                ;
+; -0.156 ; -0.156       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|saida[0]|datac                                                ;
+; -0.156 ; -0.156       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|saida[1]|datac                                                ;
+; -0.156 ; -0.156       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|saida[1]|datac                                                ;
+; -0.156 ; -0.156       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|saida[2]|datac                                                ;
+; -0.156 ; -0.156       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|saida[2]|datac                                                ;
+; -0.156 ; -0.156       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|saida[3]|datac                                                ;
+; -0.156 ; -0.156       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|saida[3]|datac                                                ;
+; -0.156 ; -0.156       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|saida[4]|datac                                                ;
+; -0.156 ; -0.156       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|saida[4]|datac                                                ;
+; -0.156 ; -0.156       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|saida[5]|datad                                                ;
+; -0.156 ; -0.156       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|saida[5]|datad                                                ;
+; -0.156 ; -0.156       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|saida[6]|datac                                                ;
+; -0.156 ; -0.156       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|saida[6]|datac                                                ;
+; -0.156 ; -0.156       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; decodificador:comb_11|saida[0]                                        ;
+; -0.156 ; -0.156       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; decodificador:comb_11|saida[0]                                        ;
+; -0.156 ; -0.156       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; decodificador:comb_11|saida[1]                                        ;
+; -0.156 ; -0.156       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; decodificador:comb_11|saida[1]                                        ;
+; -0.156 ; -0.156       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; decodificador:comb_11|saida[2]                                        ;
+; -0.156 ; -0.156       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; decodificador:comb_11|saida[2]                                        ;
+; -0.156 ; -0.156       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; decodificador:comb_11|saida[3]                                        ;
+; -0.156 ; -0.156       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; decodificador:comb_11|saida[3]                                        ;
+; -0.156 ; -0.156       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; decodificador:comb_11|saida[4]                                        ;
+; -0.156 ; -0.156       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; decodificador:comb_11|saida[4]                                        ;
+; -0.156 ; -0.156       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; decodificador:comb_11|saida[5]                                        ;
+; -0.156 ; -0.156       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; decodificador:comb_11|saida[5]                                        ;
+; -0.156 ; -0.156       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; decodificador:comb_11|saida[6]                                        ;
+; -0.156 ; -0.156       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; decodificador:comb_11|saida[6]                                        ;
+; -0.153 ; -0.153       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|StageOut[31]~0|combout            ;
+; -0.153 ; -0.153       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|StageOut[31]~0|combout            ;
+; -0.153 ; -0.153       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|Mux7~0|datac                                                  ;
+; -0.153 ; -0.153       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|Mux7~0|datac                                                  ;
+; -0.104 ; -0.104       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|StageOut[32]~1|combout            ;
+; -0.104 ; -0.104       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|StageOut[32]~1|combout            ;
+; -0.104 ; -0.104       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|Mux7~0|datad                                                  ;
+; -0.104 ; -0.104       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|Mux7~0|datad                                                  ;
+; -0.060 ; -0.060       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|Mux7~0clkctrl|inclk[0]                                        ;
+; -0.060 ; -0.060       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|Mux7~0clkctrl|inclk[0]                                        ;
+; -0.060 ; -0.060       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|Mux7~0clkctrl|outclk                                          ;
+; -0.060 ; -0.060       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|Mux7~0clkctrl|outclk                                          ;
+; -0.060 ; -0.060       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|Mux7~0|combout                                                ;
+; -0.060 ; -0.060       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|Mux7~0|combout                                                ;
+; -0.060 ; -0.060       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|saida[0]|datac                                                ;
+; -0.060 ; -0.060       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|saida[0]|datac                                                ;
+; -0.060 ; -0.060       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|saida[1]|datac                                                ;
+; -0.060 ; -0.060       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|saida[1]|datac                                                ;
+; -0.060 ; -0.060       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|saida[2]|datac                                                ;
+; -0.060 ; -0.060       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|saida[2]|datac                                                ;
+; -0.060 ; -0.060       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|saida[3]|datac                                                ;
+; -0.060 ; -0.060       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|saida[3]|datac                                                ;
+; -0.060 ; -0.060       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|saida[4]|datac                                                ;
+; -0.060 ; -0.060       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|saida[4]|datac                                                ;
+; -0.060 ; -0.060       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|saida[5]|datad                                                ;
+; -0.060 ; -0.060       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|saida[5]|datad                                                ;
+; -0.060 ; -0.060       ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|saida[6]|datac                                                ;
+; -0.060 ; -0.060       ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|saida[6]|datac                                                ;
+; -0.060 ; -0.060       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; decodificador:comb_11|saida[0]                                        ;
+; -0.060 ; -0.060       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; decodificador:comb_11|saida[0]                                        ;
+; -0.060 ; -0.060       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; decodificador:comb_11|saida[1]                                        ;
+; -0.060 ; -0.060       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; decodificador:comb_11|saida[1]                                        ;
+; -0.060 ; -0.060       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; decodificador:comb_11|saida[2]                                        ;
+; -0.060 ; -0.060       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; decodificador:comb_11|saida[2]                                        ;
+; -0.060 ; -0.060       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; decodificador:comb_11|saida[3]                                        ;
+; -0.060 ; -0.060       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; decodificador:comb_11|saida[3]                                        ;
+; -0.060 ; -0.060       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; decodificador:comb_11|saida[4]                                        ;
+; -0.060 ; -0.060       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; decodificador:comb_11|saida[4]                                        ;
+; -0.060 ; -0.060       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; decodificador:comb_11|saida[5]                                        ;
+; -0.060 ; -0.060       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; decodificador:comb_11|saida[5]                                        ;
+; -0.060 ; -0.060       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; decodificador:comb_11|saida[6]                                        ;
+; -0.060 ; -0.060       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; decodificador:comb_11|saida[6]                                        ;
+; -0.056 ; -0.056       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; Mod2|auto_generated|divider|divider|StageOut[31]~0|combout            ;
+; -0.056 ; -0.056       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; Mod2|auto_generated|divider|divider|StageOut[31]~0|combout            ;
+; -0.056 ; -0.056       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|Mux7~0|datac                                                  ;
+; -0.056 ; -0.056       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|Mux7~0|datac                                                  ;
+; -0.008 ; -0.008       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; Mod2|auto_generated|divider|divider|StageOut[32]~1|combout            ;
+; -0.008 ; -0.008       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; Mod2|auto_generated|divider|divider|StageOut[32]~1|combout            ;
+; -0.008 ; -0.008       ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|Mux7~0|datad                                                  ;
+; -0.008 ; -0.008       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|Mux7~0|datad                                                  ;
+; 0.024  ; 0.024        ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|StageOut[33]~2|combout            ;
+; 0.024  ; 0.024        ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|StageOut[33]~2|combout            ;
+; 0.024  ; 0.024        ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; comb_11|Mux7~0|datab                                                  ;
+; 0.024  ; 0.024        ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; comb_11|Mux7~0|datab                                                  ;
+; 0.120  ; 0.120        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; Mod2|auto_generated|divider|divider|StageOut[33]~2|combout            ;
+; 0.120  ; 0.120        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; Mod2|auto_generated|divider|divider|StageOut[33]~2|combout            ;
+; 0.120  ; 0.120        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_11|Mux7~0|datab                                                  ;
+; 0.120  ; 0.120        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_11|Mux7~0|datab                                                  ;
+; 0.320  ; 0.320        ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|StageOut[33]~2|datad              ;
+; 0.320  ; 0.320        ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|StageOut[33]~2|datad              ;
+; 0.320  ; 0.320        ; 0.000          ; High Pulse Width ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|add_sub_6_result_int[3]~4|combout ;
+; 0.320  ; 0.320        ; 0.000          ; Low Pulse Width  ; SW[0] ; Fall       ; Mod2|auto_generated|divider|divider|add_sub_6_result_int[3]~4|combout ;
+; 0.368  ; 0.368        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; Mod2|auto_generated|divider|divider|StageOut[31]~0|datac              ;
+; 0.368  ; 0.368        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; Mod2|auto_generated|divider|divider|StageOut[31]~0|datac              ;
+; 0.368  ; 0.368        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; Mod2|auto_generated|divider|divider|StageOut[32]~1|datac              ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; SW[0]      ; 3.703  ; 3.703  ; Rise       ; SW[0]           ;
+;  SW[0]    ; SW[0]      ; -0.096 ; -0.096 ; Rise       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; -0.237 ; -0.237 ; Rise       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; -0.317 ; -0.317 ; Rise       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; 1.008  ; 1.008  ; Rise       ; SW[0]           ;
+;  SW[10]   ; SW[0]      ; 0.697  ; 0.697  ; Rise       ; SW[0]           ;
+;  SW[14]   ; SW[0]      ; 3.430  ; 3.430  ; Rise       ; SW[0]           ;
+;  SW[15]   ; SW[0]      ; 3.199  ; 3.199  ; Rise       ; SW[0]           ;
+;  SW[16]   ; SW[0]      ; 2.978  ; 2.978  ; Rise       ; SW[0]           ;
+;  SW[17]   ; SW[0]      ; 3.703  ; 3.703  ; Rise       ; SW[0]           ;
+; SW[*]     ; SW[0]      ; 3.751  ; 3.751  ; Fall       ; SW[0]           ;
+;  SW[0]    ; SW[0]      ; -0.048 ; -0.048 ; Fall       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; -0.189 ; -0.189 ; Fall       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; -0.269 ; -0.269 ; Fall       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; 1.056  ; 1.056  ; Fall       ; SW[0]           ;
+;  SW[10]   ; SW[0]      ; 0.745  ; 0.745  ; Fall       ; SW[0]           ;
+;  SW[14]   ; SW[0]      ; 3.478  ; 3.478  ; Fall       ; SW[0]           ;
+;  SW[15]   ; SW[0]      ; 3.247  ; 3.247  ; Fall       ; SW[0]           ;
+;  SW[16]   ; SW[0]      ; 3.026  ; 3.026  ; Fall       ; SW[0]           ;
+;  SW[17]   ; SW[0]      ; 3.751  ; 3.751  ; Fall       ; SW[0]           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; SW[0]      ; 2.009  ; 2.009  ; Rise       ; SW[0]           ;
+;  SW[0]    ; SW[0]      ; 1.910  ; 1.910  ; Rise       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; 2.009  ; 2.009  ; Rise       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; 1.979  ; 1.979  ; Rise       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; 0.565  ; 0.565  ; Rise       ; SW[0]           ;
+;  SW[10]   ; SW[0]      ; 1.116  ; 1.116  ; Rise       ; SW[0]           ;
+;  SW[14]   ; SW[0]      ; -1.009 ; -1.009 ; Rise       ; SW[0]           ;
+;  SW[15]   ; SW[0]      ; -1.424 ; -1.424 ; Rise       ; SW[0]           ;
+;  SW[16]   ; SW[0]      ; -1.316 ; -1.316 ; Rise       ; SW[0]           ;
+;  SW[17]   ; SW[0]      ; -2.130 ; -2.130 ; Rise       ; SW[0]           ;
+; SW[*]     ; SW[0]      ; 2.057  ; 2.057  ; Fall       ; SW[0]           ;
+;  SW[0]    ; SW[0]      ; 1.958  ; 1.958  ; Fall       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; 2.057  ; 2.057  ; Fall       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; 2.027  ; 2.027  ; Fall       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; 0.613  ; 0.613  ; Fall       ; SW[0]           ;
+;  SW[10]   ; SW[0]      ; 1.164  ; 1.164  ; Fall       ; SW[0]           ;
+;  SW[14]   ; SW[0]      ; -0.961 ; -0.961 ; Fall       ; SW[0]           ;
+;  SW[15]   ; SW[0]      ; -1.376 ; -1.376 ; Fall       ; SW[0]           ;
+;  SW[16]   ; SW[0]      ; -1.268 ; -1.268 ; Fall       ; SW[0]           ;
+;  SW[17]   ; SW[0]      ; -2.082 ; -2.082 ; Fall       ; SW[0]           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; SW[0]      ; 7.660 ; 7.660 ; Rise       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 7.660 ; 7.660 ; Rise       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 6.913 ; 6.913 ; Rise       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 6.883 ; 6.883 ; Rise       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 6.775 ; 6.775 ; Rise       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 6.644 ; 6.644 ; Rise       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 6.516 ; 6.516 ; Rise       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 7.121 ; 7.121 ; Rise       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 4.159 ; 4.159 ; Rise       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 4.159 ; 4.159 ; Rise       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 4.024 ; 4.024 ; Rise       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 4.044 ; 4.044 ; Rise       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 4.023 ; 4.023 ; Rise       ; SW[0]           ;
+; HEX0[*]   ; SW[0]      ; 7.708 ; 7.708 ; Fall       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 7.708 ; 7.708 ; Fall       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 6.961 ; 6.961 ; Fall       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 6.931 ; 6.931 ; Fall       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 6.823 ; 6.823 ; Fall       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 6.692 ; 6.692 ; Fall       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 6.564 ; 6.564 ; Fall       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 7.169 ; 7.169 ; Fall       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 4.159 ; 4.159 ; Fall       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 4.159 ; 4.159 ; Fall       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 4.024 ; 4.024 ; Fall       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 4.044 ; 4.044 ; Fall       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 4.023 ; 4.023 ; Fall       ; SW[0]           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; SW[0]      ; 5.956 ; 5.956 ; Rise       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 7.100 ; 7.100 ; Rise       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 6.353 ; 6.353 ; Rise       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 6.323 ; 6.323 ; Rise       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 6.215 ; 6.215 ; Rise       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 6.084 ; 6.084 ; Rise       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 5.956 ; 5.956 ; Rise       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 6.561 ; 6.561 ; Rise       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 3.847 ; 3.847 ; Rise       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 3.983 ; 3.983 ; Rise       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 3.848 ; 3.848 ; Rise       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 3.868 ; 3.868 ; Rise       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 3.847 ; 3.847 ; Rise       ; SW[0]           ;
+; HEX0[*]   ; SW[0]      ; 5.908 ; 5.908 ; Fall       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 7.052 ; 7.052 ; Fall       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 6.305 ; 6.305 ; Fall       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 6.275 ; 6.275 ; Fall       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 6.167 ; 6.167 ; Fall       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 6.036 ; 6.036 ; Fall       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 5.908 ; 5.908 ; Fall       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 6.513 ; 6.513 ; Fall       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 3.847 ; 3.847 ; Fall       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 3.983 ; 3.983 ; Fall       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 3.848 ; 3.848 ; Fall       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 3.868 ; 3.868 ; Fall       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 3.847 ; 3.847 ; Fall       ; SW[0]           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; SW[1]      ; HEX1[0]     ; 4.018 ; 4.018 ; 4.018 ; 4.018 ;
+; SW[1]      ; HEX1[3]     ; 3.883 ; 3.883 ; 3.883 ; 3.883 ;
+; SW[1]      ; HEX1[4]     ; 3.903 ; 3.903 ; 3.903 ; 3.903 ;
+; SW[1]      ; HEX1[5]     ; 3.882 ; 3.882 ; 3.882 ; 3.882 ;
+; SW[2]      ; HEX1[0]     ; 3.938 ; 3.938 ; 3.938 ; 3.938 ;
+; SW[2]      ; HEX1[3]     ; 3.803 ; 3.803 ; 3.803 ; 3.803 ;
+; SW[2]      ; HEX1[4]     ; 3.823 ; 3.823 ; 3.823 ; 3.823 ;
+; SW[2]      ; HEX1[5]     ; 3.802 ; 3.802 ; 3.802 ; 3.802 ;
+; SW[3]      ; HEX1[0]     ; 5.260 ; 5.260 ; 5.260 ; 5.260 ;
+; SW[3]      ; HEX1[3]     ; 5.125 ; 5.125 ; 5.125 ; 5.125 ;
+; SW[3]      ; HEX1[4]     ; 5.145 ; 5.145 ; 5.145 ; 5.145 ;
+; SW[3]      ; HEX1[5]     ; 5.124 ; 5.124 ; 5.124 ; 5.124 ;
+; SW[10]     ; HEX1[0]     ; 4.952 ; 4.952 ; 4.952 ; 4.952 ;
+; SW[10]     ; HEX1[3]     ; 4.817 ; 4.817 ; 4.817 ; 4.817 ;
+; SW[10]     ; HEX1[4]     ; 4.837 ; 4.837 ; 4.837 ; 4.837 ;
+; SW[10]     ; HEX1[5]     ; 4.816 ; 4.816 ; 4.816 ; 4.816 ;
+; SW[14]     ; HEX1[0]     ; 7.685 ; 7.685 ; 7.685 ; 7.685 ;
+; SW[14]     ; HEX1[3]     ; 7.550 ; 7.550 ; 7.550 ; 7.550 ;
+; SW[14]     ; HEX1[4]     ; 7.570 ; 7.570 ; 7.570 ; 7.570 ;
+; SW[14]     ; HEX1[5]     ; 7.549 ; 7.549 ; 7.549 ; 7.549 ;
+; SW[15]     ; HEX1[0]     ; 7.454 ; 7.454 ; 7.454 ; 7.454 ;
+; SW[15]     ; HEX1[3]     ; 7.319 ; 7.319 ; 7.319 ; 7.319 ;
+; SW[15]     ; HEX1[4]     ; 7.339 ; 7.339 ; 7.339 ; 7.339 ;
+; SW[15]     ; HEX1[5]     ; 7.318 ; 7.318 ; 7.318 ; 7.318 ;
+; SW[16]     ; HEX1[0]     ; 7.233 ; 7.233 ; 7.233 ; 7.233 ;
+; SW[16]     ; HEX1[3]     ; 7.098 ; 7.098 ; 7.098 ; 7.098 ;
+; SW[16]     ; HEX1[4]     ; 7.118 ; 7.118 ; 7.118 ; 7.118 ;
+; SW[16]     ; HEX1[5]     ; 7.097 ; 7.097 ; 7.097 ; 7.097 ;
+; SW[17]     ; HEX1[0]     ; 7.955 ; 7.955 ; 7.955 ; 7.955 ;
+; SW[17]     ; HEX1[3]     ; 7.820 ; 7.820 ; 7.820 ; 7.820 ;
+; SW[17]     ; HEX1[4]     ; 7.840 ; 7.840 ; 7.840 ; 7.840 ;
+; SW[17]     ; HEX1[5]     ; 7.819 ; 7.819 ; 7.819 ; 7.819 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; SW[1]      ; HEX1[0]     ; 3.884 ; 3.884 ; 3.884 ; 3.884 ;
+; SW[1]      ; HEX1[3]     ; 3.749 ; 3.749 ; 3.749 ; 3.749 ;
+; SW[1]      ; HEX1[4]     ; 3.769 ; 3.769 ; 3.769 ; 3.769 ;
+; SW[1]      ; HEX1[5]     ; 3.748 ; 3.748 ; 3.748 ; 3.748 ;
+; SW[2]      ; HEX1[0]     ; 3.905 ; 3.905 ; 3.905 ; 3.905 ;
+; SW[2]      ; HEX1[3]     ; 3.770 ; 3.770 ; 3.770 ; 3.770 ;
+; SW[2]      ; HEX1[4]     ; 3.790 ; 3.790 ; 3.790 ; 3.790 ;
+; SW[2]      ; HEX1[5]     ; 3.769 ; 3.769 ; 3.769 ; 3.769 ;
+; SW[3]      ; HEX1[0]     ; 5.260 ; 5.260 ; 5.260 ; 5.260 ;
+; SW[3]      ; HEX1[3]     ; 5.125 ; 5.125 ; 5.125 ; 5.125 ;
+; SW[3]      ; HEX1[4]     ; 5.145 ; 5.145 ; 5.145 ; 5.145 ;
+; SW[3]      ; HEX1[5]     ; 5.124 ; 5.124 ; 5.124 ; 5.124 ;
+; SW[10]     ; HEX1[0]     ; 4.777 ; 4.777 ; 4.777 ; 4.777 ;
+; SW[10]     ; HEX1[3]     ; 4.642 ; 4.642 ; 4.642 ; 4.642 ;
+; SW[10]     ; HEX1[4]     ; 4.662 ; 4.662 ; 4.662 ; 4.662 ;
+; SW[10]     ; HEX1[5]     ; 4.641 ; 4.641 ; 4.641 ; 4.641 ;
+; SW[14]     ; HEX1[0]     ; 7.558 ; 7.558 ; 7.558 ; 7.558 ;
+; SW[14]     ; HEX1[3]     ; 7.423 ; 7.423 ; 7.423 ; 7.423 ;
+; SW[14]     ; HEX1[4]     ; 7.443 ; 7.443 ; 7.443 ; 7.443 ;
+; SW[14]     ; HEX1[5]     ; 7.422 ; 7.422 ; 7.422 ; 7.422 ;
+; SW[15]     ; HEX1[0]     ; 7.317 ; 7.317 ; 7.317 ; 7.317 ;
+; SW[15]     ; HEX1[3]     ; 7.182 ; 7.182 ; 7.182 ; 7.182 ;
+; SW[15]     ; HEX1[4]     ; 7.202 ; 7.202 ; 7.202 ; 7.202 ;
+; SW[15]     ; HEX1[5]     ; 7.181 ; 7.181 ; 7.181 ; 7.181 ;
+; SW[16]     ; HEX1[0]     ; 7.202 ; 7.202 ; 7.202 ; 7.202 ;
+; SW[16]     ; HEX1[3]     ; 7.067 ; 7.067 ; 7.067 ; 7.067 ;
+; SW[16]     ; HEX1[4]     ; 7.087 ; 7.087 ; 7.087 ; 7.087 ;
+; SW[16]     ; HEX1[5]     ; 7.066 ; 7.066 ; 7.066 ; 7.066 ;
+; SW[17]     ; HEX1[0]     ; 7.955 ; 7.955 ; 7.955 ; 7.955 ;
+; SW[17]     ; HEX1[3]     ; 7.820 ; 7.820 ; 7.820 ; 7.820 ;
+; SW[17]     ; HEX1[4]     ; 7.840 ; 7.840 ; 7.840 ; 7.840 ;
+; SW[17]     ; HEX1[5]     ; 7.819 ; 7.819 ; 7.819 ; 7.819 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+--------+---------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+---------+----------+---------+---------------------+
+; Worst-case Slack ; -0.231 ; -3.924  ; N/A      ; N/A     ; -1.380              ;
+;  SW[0]           ; -0.231 ; -3.924  ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -0.285 ; -27.081 ; 0.0      ; 0.0     ; -87.752             ;
+;  SW[0]           ; -0.285 ; -27.081 ; N/A      ; N/A     ; -87.752             ;
++------------------+--------+---------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; SW[0]      ; 7.257 ; 7.257 ; Rise       ; SW[0]           ;
+;  SW[0]    ; SW[0]      ; 0.601 ; 0.601 ; Rise       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; 0.242 ; 0.242 ; Rise       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; 0.033 ; 0.033 ; Rise       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; 2.806 ; 2.806 ; Rise       ; SW[0]           ;
+;  SW[10]   ; SW[0]      ; 2.107 ; 2.107 ; Rise       ; SW[0]           ;
+;  SW[14]   ; SW[0]      ; 6.672 ; 6.672 ; Rise       ; SW[0]           ;
+;  SW[15]   ; SW[0]      ; 6.121 ; 6.121 ; Rise       ; SW[0]           ;
+;  SW[16]   ; SW[0]      ; 5.601 ; 5.601 ; Rise       ; SW[0]           ;
+;  SW[17]   ; SW[0]      ; 7.257 ; 7.257 ; Rise       ; SW[0]           ;
+; SW[*]     ; SW[0]      ; 7.387 ; 7.387 ; Fall       ; SW[0]           ;
+;  SW[0]    ; SW[0]      ; 0.731 ; 0.731 ; Fall       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; 0.372 ; 0.372 ; Fall       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; 0.163 ; 0.163 ; Fall       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; 2.936 ; 2.936 ; Fall       ; SW[0]           ;
+;  SW[10]   ; SW[0]      ; 2.237 ; 2.237 ; Fall       ; SW[0]           ;
+;  SW[14]   ; SW[0]      ; 6.802 ; 6.802 ; Fall       ; SW[0]           ;
+;  SW[15]   ; SW[0]      ; 6.251 ; 6.251 ; Fall       ; SW[0]           ;
+;  SW[16]   ; SW[0]      ; 5.731 ; 5.731 ; Fall       ; SW[0]           ;
+;  SW[17]   ; SW[0]      ; 7.387 ; 7.387 ; Fall       ; SW[0]           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; SW[0]      ; 4.029  ; 4.029  ; Rise       ; SW[0]           ;
+;  SW[0]    ; SW[0]      ; 3.794  ; 3.794  ; Rise       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; 4.029  ; 4.029  ; Rise       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; 3.975  ; 3.975  ; Rise       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; 1.003  ; 1.003  ; Rise       ; SW[0]           ;
+;  SW[10]   ; SW[0]      ; 2.288  ; 2.288  ; Rise       ; SW[0]           ;
+;  SW[14]   ; SW[0]      ; -0.821 ; -0.821 ; Rise       ; SW[0]           ;
+;  SW[15]   ; SW[0]      ; -1.424 ; -1.424 ; Rise       ; SW[0]           ;
+;  SW[16]   ; SW[0]      ; -1.316 ; -1.316 ; Rise       ; SW[0]           ;
+;  SW[17]   ; SW[0]      ; -2.130 ; -2.130 ; Rise       ; SW[0]           ;
+; SW[*]     ; SW[0]      ; 4.159  ; 4.159  ; Fall       ; SW[0]           ;
+;  SW[0]    ; SW[0]      ; 3.924  ; 3.924  ; Fall       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; 4.159  ; 4.159  ; Fall       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; 4.105  ; 4.105  ; Fall       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; 1.133  ; 1.133  ; Fall       ; SW[0]           ;
+;  SW[10]   ; SW[0]      ; 2.418  ; 2.418  ; Fall       ; SW[0]           ;
+;  SW[14]   ; SW[0]      ; -0.691 ; -0.691 ; Fall       ; SW[0]           ;
+;  SW[15]   ; SW[0]      ; -1.376 ; -1.376 ; Fall       ; SW[0]           ;
+;  SW[16]   ; SW[0]      ; -1.268 ; -1.268 ; Fall       ; SW[0]           ;
+;  SW[17]   ; SW[0]      ; -2.082 ; -2.082 ; Fall       ; SW[0]           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; SW[0]      ; 15.235 ; 15.235 ; Rise       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 15.235 ; 15.235 ; Rise       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 13.924 ; 13.924 ; Rise       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 13.889 ; 13.889 ; Rise       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 13.642 ; 13.642 ; Rise       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 13.225 ; 13.225 ; Rise       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 12.978 ; 12.978 ; Rise       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 14.039 ; 14.039 ; Rise       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 8.485  ; 8.485  ; Rise       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 8.485  ; 8.485  ; Rise       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 8.313  ; 8.313  ; Rise       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 8.333  ; 8.333  ; Rise       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 8.310  ; 8.310  ; Rise       ; SW[0]           ;
+; HEX0[*]   ; SW[0]      ; 15.365 ; 15.365 ; Fall       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 15.365 ; 15.365 ; Fall       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 14.054 ; 14.054 ; Fall       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 14.019 ; 14.019 ; Fall       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 13.772 ; 13.772 ; Fall       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 13.355 ; 13.355 ; Fall       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 13.108 ; 13.108 ; Fall       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 14.169 ; 14.169 ; Fall       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 8.485  ; 8.485  ; Fall       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 8.485  ; 8.485  ; Fall       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 8.313  ; 8.313  ; Fall       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 8.333  ; 8.333  ; Fall       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 8.310  ; 8.310  ; Fall       ; SW[0]           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; SW[0]      ; 5.956 ; 5.956 ; Rise       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 7.100 ; 7.100 ; Rise       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 6.353 ; 6.353 ; Rise       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 6.323 ; 6.323 ; Rise       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 6.215 ; 6.215 ; Rise       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 6.084 ; 6.084 ; Rise       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 5.956 ; 5.956 ; Rise       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 6.561 ; 6.561 ; Rise       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 3.847 ; 3.847 ; Rise       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 3.983 ; 3.983 ; Rise       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 3.848 ; 3.848 ; Rise       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 3.868 ; 3.868 ; Rise       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 3.847 ; 3.847 ; Rise       ; SW[0]           ;
+; HEX0[*]   ; SW[0]      ; 5.908 ; 5.908 ; Fall       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 7.052 ; 7.052 ; Fall       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 6.305 ; 6.305 ; Fall       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 6.275 ; 6.275 ; Fall       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 6.167 ; 6.167 ; Fall       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 6.036 ; 6.036 ; Fall       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 5.908 ; 5.908 ; Fall       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 6.513 ; 6.513 ; Fall       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 3.847 ; 3.847 ; Fall       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 3.983 ; 3.983 ; Fall       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 3.848 ; 3.848 ; Fall       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 3.868 ; 3.868 ; Fall       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 3.847 ; 3.847 ; Fall       ; SW[0]           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Progagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; SW[1]      ; HEX1[0]     ; 8.126  ; 8.126  ; 8.126  ; 8.126  ;
+; SW[1]      ; HEX1[3]     ; 7.954  ; 7.954  ; 7.954  ; 7.954  ;
+; SW[1]      ; HEX1[4]     ; 7.974  ; 7.974  ; 7.974  ; 7.974  ;
+; SW[1]      ; HEX1[5]     ; 7.951  ; 7.951  ; 7.951  ; 7.951  ;
+; SW[2]      ; HEX1[0]     ; 7.917  ; 7.917  ; 7.917  ; 7.917  ;
+; SW[2]      ; HEX1[3]     ; 7.745  ; 7.745  ; 7.745  ; 7.745  ;
+; SW[2]      ; HEX1[4]     ; 7.765  ; 7.765  ; 7.765  ; 7.765  ;
+; SW[2]      ; HEX1[5]     ; 7.742  ; 7.742  ; 7.742  ; 7.742  ;
+; SW[3]      ; HEX1[0]     ; 10.684 ; 10.684 ; 10.684 ; 10.684 ;
+; SW[3]      ; HEX1[3]     ; 10.512 ; 10.512 ; 10.512 ; 10.512 ;
+; SW[3]      ; HEX1[4]     ; 10.532 ; 10.532 ; 10.532 ; 10.532 ;
+; SW[3]      ; HEX1[5]     ; 10.509 ; 10.509 ; 10.509 ; 10.509 ;
+; SW[10]     ; HEX1[0]     ; 9.991  ; 9.991  ; 9.991  ; 9.991  ;
+; SW[10]     ; HEX1[3]     ; 9.819  ; 9.819  ; 9.819  ; 9.819  ;
+; SW[10]     ; HEX1[4]     ; 9.839  ; 9.839  ; 9.839  ; 9.839  ;
+; SW[10]     ; HEX1[5]     ; 9.816  ; 9.816  ; 9.816  ; 9.816  ;
+; SW[14]     ; HEX1[0]     ; 14.556 ; 14.556 ; 14.556 ; 14.556 ;
+; SW[14]     ; HEX1[3]     ; 14.384 ; 14.384 ; 14.384 ; 14.384 ;
+; SW[14]     ; HEX1[4]     ; 14.404 ; 14.404 ; 14.404 ; 14.404 ;
+; SW[14]     ; HEX1[5]     ; 14.381 ; 14.381 ; 14.381 ; 14.381 ;
+; SW[15]     ; HEX1[0]     ; 14.005 ; 14.005 ; 14.005 ; 14.005 ;
+; SW[15]     ; HEX1[3]     ; 13.833 ; 13.833 ; 13.833 ; 13.833 ;
+; SW[15]     ; HEX1[4]     ; 13.853 ; 13.853 ; 13.853 ; 13.853 ;
+; SW[15]     ; HEX1[5]     ; 13.830 ; 13.830 ; 13.830 ; 13.830 ;
+; SW[16]     ; HEX1[0]     ; 13.485 ; 13.485 ; 13.485 ; 13.485 ;
+; SW[16]     ; HEX1[3]     ; 13.313 ; 13.313 ; 13.313 ; 13.313 ;
+; SW[16]     ; HEX1[4]     ; 13.333 ; 13.333 ; 13.333 ; 13.333 ;
+; SW[16]     ; HEX1[5]     ; 13.310 ; 13.310 ; 13.310 ; 13.310 ;
+; SW[17]     ; HEX1[0]     ; 15.135 ; 15.135 ; 15.135 ; 15.135 ;
+; SW[17]     ; HEX1[3]     ; 14.963 ; 14.963 ; 14.963 ; 14.963 ;
+; SW[17]     ; HEX1[4]     ; 14.983 ; 14.983 ; 14.983 ; 14.983 ;
+; SW[17]     ; HEX1[5]     ; 14.960 ; 14.960 ; 14.960 ; 14.960 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; SW[1]      ; HEX1[0]     ; 3.884 ; 3.884 ; 3.884 ; 3.884 ;
+; SW[1]      ; HEX1[3]     ; 3.749 ; 3.749 ; 3.749 ; 3.749 ;
+; SW[1]      ; HEX1[4]     ; 3.769 ; 3.769 ; 3.769 ; 3.769 ;
+; SW[1]      ; HEX1[5]     ; 3.748 ; 3.748 ; 3.748 ; 3.748 ;
+; SW[2]      ; HEX1[0]     ; 3.905 ; 3.905 ; 3.905 ; 3.905 ;
+; SW[2]      ; HEX1[3]     ; 3.770 ; 3.770 ; 3.770 ; 3.770 ;
+; SW[2]      ; HEX1[4]     ; 3.790 ; 3.790 ; 3.790 ; 3.790 ;
+; SW[2]      ; HEX1[5]     ; 3.769 ; 3.769 ; 3.769 ; 3.769 ;
+; SW[3]      ; HEX1[0]     ; 5.260 ; 5.260 ; 5.260 ; 5.260 ;
+; SW[3]      ; HEX1[3]     ; 5.125 ; 5.125 ; 5.125 ; 5.125 ;
+; SW[3]      ; HEX1[4]     ; 5.145 ; 5.145 ; 5.145 ; 5.145 ;
+; SW[3]      ; HEX1[5]     ; 5.124 ; 5.124 ; 5.124 ; 5.124 ;
+; SW[10]     ; HEX1[0]     ; 4.777 ; 4.777 ; 4.777 ; 4.777 ;
+; SW[10]     ; HEX1[3]     ; 4.642 ; 4.642 ; 4.642 ; 4.642 ;
+; SW[10]     ; HEX1[4]     ; 4.662 ; 4.662 ; 4.662 ; 4.662 ;
+; SW[10]     ; HEX1[5]     ; 4.641 ; 4.641 ; 4.641 ; 4.641 ;
+; SW[14]     ; HEX1[0]     ; 7.558 ; 7.558 ; 7.558 ; 7.558 ;
+; SW[14]     ; HEX1[3]     ; 7.423 ; 7.423 ; 7.423 ; 7.423 ;
+; SW[14]     ; HEX1[4]     ; 7.443 ; 7.443 ; 7.443 ; 7.443 ;
+; SW[14]     ; HEX1[5]     ; 7.422 ; 7.422 ; 7.422 ; 7.422 ;
+; SW[15]     ; HEX1[0]     ; 7.317 ; 7.317 ; 7.317 ; 7.317 ;
+; SW[15]     ; HEX1[3]     ; 7.182 ; 7.182 ; 7.182 ; 7.182 ;
+; SW[15]     ; HEX1[4]     ; 7.202 ; 7.202 ; 7.202 ; 7.202 ;
+; SW[15]     ; HEX1[5]     ; 7.181 ; 7.181 ; 7.181 ; 7.181 ;
+; SW[16]     ; HEX1[0]     ; 7.202 ; 7.202 ; 7.202 ; 7.202 ;
+; SW[16]     ; HEX1[3]     ; 7.067 ; 7.067 ; 7.067 ; 7.067 ;
+; SW[16]     ; HEX1[4]     ; 7.087 ; 7.087 ; 7.087 ; 7.087 ;
+; SW[16]     ; HEX1[5]     ; 7.066 ; 7.066 ; 7.066 ; 7.066 ;
+; SW[17]     ; HEX1[0]     ; 7.955 ; 7.955 ; 7.955 ; 7.955 ;
+; SW[17]     ; HEX1[3]     ; 7.820 ; 7.820 ; 7.820 ; 7.820 ;
+; SW[17]     ; HEX1[4]     ; 7.840 ; 7.840 ; 7.840 ; 7.840 ;
+; SW[17]     ; HEX1[5]     ; 7.819 ; 7.819 ; 7.819 ; 7.819 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; SW[0]      ; SW[0]    ; 434      ; 434      ; 434      ; 434      ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; SW[0]      ; SW[0]    ; 434      ; 434      ; 434      ; 434      ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 9     ; 9    ;
+; Unconstrained Input Port Paths  ; 92    ; 92   ;
+; Unconstrained Output Ports      ; 11    ; 11   ;
+; Unconstrained Output Port Paths ; 43    ; 43   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Nov 03 12:12:55 2016
+Info: Command: quartus_sta Somador4bits -c Somador4bits
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 7 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Somador4bits.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name SW[0] SW[0]
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: Mod2|auto_generated|divider|divider|StageOut[31]~0  from: datac  to: combout
+    Info (332098): Cell: Mod2|auto_generated|divider|divider|StageOut[32]~1  from: datac  to: combout
+    Info (332098): Cell: Mod2|auto_generated|divider|divider|StageOut[33]~2  from: datac  to: combout
+    Info (332098): Cell: Mod2|auto_generated|divider|divider|add_sub_6_result_int[1]~0  from: datab  to: combout
+    Info (332098): Cell: Mod2|auto_generated|divider|divider|add_sub_6_result_int[2]~2  from: cin  to: combout
+    Info (332098): Cell: Mod2|auto_generated|divider|divider|add_sub_6_result_int[2]~2  from: datab  to: combout
+    Info (332098): Cell: Mod2|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: cin  to: combout
+    Info (332098): Cell: Mod2|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: datab  to: combout
+    Info (332098): Cell: comb_3|comb_23|saida  from: datac  to: combout
+    Info (332098): Cell: comb_3|comb_23|saida  from: datad  to: combout
+    Info (332098): Cell: comb_3|comb_24|saida~0  from: datad  to: combout
+    Info (332098): Cell: comb_3|comb_25|saida  from: datad  to: combout
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.231
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.231        -0.285 SW[0] 
+Info (332146): Worst-case hold slack is -3.924
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.924       -27.081 SW[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -87.752 SW[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: Mod2|auto_generated|divider|divider|StageOut[31]~0  from: datac  to: combout
+    Info (332098): Cell: Mod2|auto_generated|divider|divider|StageOut[32]~1  from: datac  to: combout
+    Info (332098): Cell: Mod2|auto_generated|divider|divider|StageOut[33]~2  from: datac  to: combout
+    Info (332098): Cell: Mod2|auto_generated|divider|divider|add_sub_6_result_int[1]~0  from: datab  to: combout
+    Info (332098): Cell: Mod2|auto_generated|divider|divider|add_sub_6_result_int[2]~2  from: cin  to: combout
+    Info (332098): Cell: Mod2|auto_generated|divider|divider|add_sub_6_result_int[2]~2  from: datab  to: combout
+    Info (332098): Cell: Mod2|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: cin  to: combout
+    Info (332098): Cell: Mod2|auto_generated|divider|divider|add_sub_6_result_int[3]~4  from: datab  to: combout
+    Info (332098): Cell: comb_3|comb_23|saida  from: datac  to: combout
+    Info (332098): Cell: comb_3|comb_23|saida  from: datad  to: combout
+    Info (332098): Cell: comb_3|comb_24|saida~0  from: datad  to: combout
+    Info (332098): Cell: comb_3|comb_25|saida  from: datad  to: combout
+Info (332146): Worst-case setup slack is 0.548
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.548         0.000 SW[0] 
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case hold slack is -1.958
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.958       -13.537 SW[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -10.008 SW[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 429 megabytes
+    Info: Processing ended: Thu Nov 03 12:12:57 2016
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

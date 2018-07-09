@@ -1,0 +1,98 @@
+﻿O programa realiza a criptografia utilizando como entrada uma sequência de números. Estes números representam as letras do alfabeto.
+
+três primeiros bits: função. próximos cinco bits: operandos (recebe, operando1, operando2/Constante).
+
+
+Tipo de Instrução:
+Tipo 1: 000 0 00 00	---	Tipo 2: 000 0 0 000
+
+addi	sumi 	add integer	000 0 00 00
+add	sum 	addition	001 0 0 000
+
+
+
+lw      lw	load word	010 0 0 000
+
+xor	xr	xor		011 0 00 00
+
+sw	sw	store word	100 0 0 000
+
+
+- 	halt	halt		111 11111
+
+
+
+
+addi $s0, 0, 0		// 000 0 00 00
+add $s1, $s0, 4 	// 001 1 0 100
+lw  $s0, 0($s0)		// 010 0 0 000
+lw  $s1, 0($s1)		// 010 1 1 000
+xor $s1, $s0, $s1	// 011 1 00 01
+IMPRIME $s1
+addi $s0, 0, 0		// 000 0 00 00
+sw  $s1, 0($s0)		// 100 1 0 000
+
+addi $s0, 0, 1		// 000 0 00 01
+add $s1, $s0, 4 	// 001 1 0 100
+lw  $s0, 0($s0)		// 010 0 0 000
+lw  $s1, 0($s1)		// 010 1 1 000
+xor $s1, $s0, $s1	// 011 1 00 01
+IMPRIME $s1
+addi $s0, 0, 1		// 000 0 00 01
+sw  $s1, 0($s0)		// 100 1 0 000
+
+addi $s0, 0, 2		// 000 0 00 10
+add $s1, $s0, 4 	// 001 1 0 100
+lw  $s0, 0($s0)		// 010 0 0 000
+lw  $s1, 0($s1)		// 010 1 1 000
+xor $s1, $s0, $s1	// 011 1 00 01
+IMPRIME $s1
+add $s0, 0, 2		// 000 0 00 10
+sw  $s1, 0($s0)		// 100 1 0 000
+
+addi $s0, 0, 3		// 000 0 00 11
+add $s1, $s0, 4 	// 001 1 0 100
+lw  $s0, 0($s0)		// 010 0 0 000
+lw  $s1, 0($s1)		// 010 1 1 000
+xor $s1, $s0, $s1	// 011 1 00 01
+IMPRIME $s1
+addi $s0, 0, 3		// 000 0 00 11
+sw  $s1, 0($s0)		// 100 1 0 000
+			
+IMPRIME decodificação
+
+addi $s0, 0, 0		// 000 0 00 00
+add $s1, $s0, 4 	// 001 1 0 100
+lw  $s0, 0($s0)		// 010 0 0 000
+lw  $s1, 0($s1)		// 010 1 1 000
+xor $s1, $s0, $s1	// 011 1 00 01
+IMPRIME $s1
+addi $s0, 0, 0		// 000 0 00 00
+sw  $s1, 0($s0)		// 100 1 0 000
+
+addi $s0, 0, 1		// 000 0 00 01
+add $s1, $s0, 4 	// 001 1 0 100
+lw  $s0, 0($s0)		// 010 0 0 000
+lw  $s1, 0($s1)		// 010 1 1 000
+xor $s1, $s0, $s1	// 011 1 00 01
+IMPRIME $s1
+addi $s0, 0, 1		// 000 0 00 01
+sw  $s1, 0($s0)		// 100 1 0 000
+
+addi $s0, 0, 2		// 000 0 00 10
+add $s1, $s0, 4 	// 001 1 0 100
+lw  $s0, 0($s0)		// 010 0 0 000
+lw  $s1, 0($s1)		// 010 1 1 000
+xor $s1, $s0, $s1	// 011 1 00 01
+IMPRIME $s1
+add $s0, 0, 2		// 000 0 00 10
+sw  $s1, 0($s0)		// 100 1 0 000
+
+addi $s0, 0, 3		// 000 0 00 11
+add $s1, $s0, 4 	// 001 1 0 100
+lw  $s0, 0($s0)		// 010 0 0 000
+lw  $s1, 0($s1)		// 010 1 1 000
+xor $s1, $s0, $s1	// 011 1 00 01
+IMPRIME $s1
+addi $s0, 0, 3		// 000 0 00 11
+sw  $s1, 0($s0)		// 100 1 0 000

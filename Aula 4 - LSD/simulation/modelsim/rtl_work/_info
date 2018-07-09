@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Aluno\Desktop\Aula 4 - LSD\simulation\modelsim
+vcomparador1
+!i10b 1
+!s100 2dz4Ej0TL@caOCDJf?@f42
+I:z987jU5D<oeY][aBQ8:;2
+VQjiMA:Pc:ZInbE:R]?JW=0
+Z1 dC:\Users\Aluno\Desktop\Aula 4 - LSD\simulation\modelsim
+w1472741589
+8C:/Users/Aluno/Desktop/Aula 4 - LSD/comparador1.v
+FC:/Users/Aluno/Desktop/Aula 4 - LSD/comparador1.v
+L0 1
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1472742527.379000
+!s107 C:/Users/Aluno/Desktop/Aula 4 - LSD/comparador1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Aluno/Desktop/Aula 4 - LSD|C:/Users/Aluno/Desktop/Aula 4 - LSD/comparador1.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work {+incdir+C:/Users/Aluno/Desktop/Aula 4 - LSD} -O0

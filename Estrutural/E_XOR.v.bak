@@ -1,0 +1,13 @@
+module porta_exor (Y,A,B);
+
+output Y;
+input A, B;
+wire notA, notB; //wire = variável apaga após o uso
+wire and1, and2;
+not (notA, A);
+not (notB, B);
+and (and1, notA, B);
+and (and2, notB, A);
+or saída_or (Y, and1, and2);
+
+endmodule

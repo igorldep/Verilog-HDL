@@ -1,0 +1,12 @@
+module decodificador( input A, B, C, D, output a, b, c, d, e, f, g );
+
+assign a = (~A & B & ~A & ~D);
+assign b = (~A & B & ~C & D | ~A & B & C & ~D);
+assign c = (~B & C & ~D | ~A & ~B & ~C & D);
+assign d = ( B & ~C & ~D | B & C & D | ~A & ~B & ~C & D);
+assign e = (D | B & ~C);
+assign f = (~B & C | C & D | ~A & ~B & D);
+assign g = ( ~A & ~B & ~C | ~A & ~B & ~D | B & C & D)
+
+
+endmodule

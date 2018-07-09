@@ -1,0 +1,80 @@
+!SESSION 2007-06-13 14:42:41.687 -----------------------------------------------
+eclipse.buildId=M20060629-1905
+java.version=1.5.0_06
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Command-line arguments:  -data D:\keith_temp\quartusII\DE2_System_v1.5\DE2_System_v1.5\DE2_demonstrations\DE2_NIOS_HOST_MOUSE_VGA -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 1 0 2007-06-13 14:42:43.875
+!MESSAGE Conversion of persistent properties completed successfully.
+
+!ENTRY org.eclipse.cdt.debug.core 4 1000 2007-06-13 14:42:50.328
+!MESSAGE Unable to restore source location: Unable to initialize source location - invalid directory path C:\altera\kits\nios2_60\bin\nios2-gnutools\src.
+
+!ENTRY org.eclipse.cdt.debug.core 4 1000 2007-06-13 14:42:52.140
+!MESSAGE Unable to restore source location: Unable to initialize source location - invalid directory path C:\altera\kits\nios2_60\bin\nios2-gnutools\src.
+
+!ENTRY com.altera.ide.core 1 0 2007-06-13 14:43:26.218
+!MESSAGE C:\altera\71\quartus\bin\cygwin\bin/cygpath --unix --file - 
+!SESSION 2007-06-13 14:58:31.515 -----------------------------------------------
+eclipse.buildId=M20060629-1905
+java.version=1.5.0_06
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Command-line arguments:  -data D:\keith_temp\quartusII\DE2_System_v1.5\DE2_System_v1.5\DE2_demonstrations\DE2_NIOS_HOST_MOUSE_VGA -os win32 -ws win32 -arch x86
+
+!ENTRY com.altera.ide.core 1 0 2007-06-13 15:00:39.937
+!MESSAGE C:\altera\71\quartus\bin\cygwin\bin/cygpath --unix --file - 
+
+!ENTRY com.altera.nj.launch 1 0 2007-06-13 15:06:02.531
+!MESSAGE jtagconfig --listhardware 
+
+!ENTRY com.altera.nj.launch 1 0 2007-06-13 15:06:03.437
+!MESSAGE jtagconfig --cable USB-Blaster [USB-0] --extra-info 
+!SESSION 2007-06-20 16:00:14.321 -----------------------------------------------
+eclipse.buildId=M20060629-1905
+java.version=1.5.0_06
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Command-line arguments:  -data D:\keith_temp\quartusII\DE2_System_v1.5\DE2_System_v1.5\DE2_demonstrations\DE2_NIOS_HOST_MOUSE_VGA -os win32 -ws win32 -arch x86
+
+!ENTRY com.altera.ide.core 1 0 2007-06-20 16:01:55.540
+!MESSAGE C:\altera\71\quartus\bin\cygwin\bin/cygpath --unix --file - 
+
+!ENTRY org.eclipse.debug.core 4 2 2007-06-20 16:12:13.196
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole.handleDebugEvents(ProcessConsole.java:435)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1076)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1108)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:344)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+!ENTRY org.eclipse.core.jobs 4 2 2007-06-20 16:12:13.587
+!MESSAGE An internal error occurred during: "Debug Event Dispatch".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.debug.core.DebugPlugin.log(DebugPlugin.java:860)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.handleException(DebugPlugin.java:1062)
+	at org.eclipse.core.runtime.SafeRunner.handleException(SafeRunner.java:68)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:39)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1108)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:344)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+!SESSION 2007-06-22 09:07:05.312 -----------------------------------------------
+eclipse.buildId=M20060629-1905
+java.version=1.5.0_06
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Command-line arguments:  -data D:\keith_temp\quartusII\DE2_System_v1.5\DE2_System_v1.5\DE2_demonstrations\DE2_NIOS_HOST_MOUSE_VGA -os win32 -ws win32 -arch x86
+
+!ENTRY com.altera.nj.launch 1 0 2007-06-22 09:07:20.781
+!MESSAGE jtagconfig --listhardware 
+
+!ENTRY com.altera.nj.launch 1 0 2007-06-22 09:07:22.125
+!MESSAGE jtagconfig --cable USB-Blaster [USB-0] --extra-info 
+
+!ENTRY com.altera.ide.core 1 0 2007-06-22 09:07:35.109
+!MESSAGE C:\altera\71\quartus\bin\cygwin\bin/cygpath --unix --file - 

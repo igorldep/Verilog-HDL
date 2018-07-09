@@ -1,0 +1,5 @@
+#!/bin/sh
+
+c:/altera/71/quartus//bin/perl/bin/perl -I$sopc_builder/bin -I$sopc_builder/bin/perl_lib -I$sopc_builder/bin/europa $sopc_builder/bin/ptf_update.pl system_0.ptf 
+
+c:/altera/71/quartus//bin/perl/bin/perl -I$sopc_builder/bin -I$sopc_builder/bin/perl_lib -I$sopc_builder/bin/europa $sopc_builder/bin/mk_systembus.pl --sopc_directory=$sopc_builder --sopc_perl=c:/altera/71/quartus//bin/perl --sopc_lib_path="D:/keith_temp/quartusII/DE2_System_v1.5/DE2_System_v1.5/DE2_demonstrations/DE2_NET+C:/altera/71/ip/pci_express_compiler/lib/sopc_builder+C:/altera/71/ip/ddr2_high_perf/lib/sopc_builder+C:/altera/71/ip/ddr_high_perf/lib/sopc_builder+C:/altera/71/ip/sopc_builder_ip+C:/altera/71/ip/nios2_ip+C:/altera/71/ip/triple_speed_ethernet/lib/sopc_builder+C:/altera/71/ip/pci_compiler/lib/sopc_builder+C:/altera/71/ip/ddr_ddr2_sdram/lib/sopc_builder+c:/altera/71/quartus/sopc_builder/components" --target_module_name=system_0 --system_directory=D:/keith_temp/quartusII/DE2_System_v1.5/DE2_System_v1.5/DE2_demonstrations/DE2_NET --system_name=system_0 --project_name=DE2_NET.quartus --sopc_quartus_dir= $1

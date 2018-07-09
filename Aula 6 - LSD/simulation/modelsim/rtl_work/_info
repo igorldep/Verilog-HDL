@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Aluno\Desktop\Aula 6 - LSD\simulation\modelsim
+vmux8
+IcPmZj03;2Z57dm3f6JV=i2
+Vak1zThO^G<=baQdQeO1g<1
+Z1 dC:\Users\Aluno\Desktop\Aula 6 - LSD\simulation\modelsim
+w1473953199
+8C:/Users/Aluno/Desktop/Aula 6 - LSD/mux8.v
+FC:/Users/Aluno/Desktop/Aula 6 - LSD/mux8.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+!i10b 1
+!s100 LZUKfEPfYWEhgB28KO[]52
+!s85 0
+!s108 1473953240.115000
+!s107 C:/Users/Aluno/Desktop/Aula 6 - LSD/mux8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Aluno/Desktop/Aula 6 - LSD|C:/Users/Aluno/Desktop/Aula 6 - LSD/mux8.v|
+!s101 -O0
+Z4 !s92 -vlog01compat -work work {+incdir+C:/Users/Aluno/Desktop/Aula 6 - LSD} -O0
+vmuxx
+!i10b 1
+!s100 iEB2<`Q5Gm1CZ<68EFTVz3
+I@3`<iOZ@UGY8m7Eka;P592
+VMlVl[RT8@QHS]N2;RCAzj2
+R1
+w1473952094
+8C:/Users/Aluno/Desktop/Aula 6 - LSD/muxx.v
+FC:/Users/Aluno/Desktop/Aula 6 - LSD/muxx.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1473953240.303000
+!s107 C:/Users/Aluno/Desktop/Aula 6 - LSD/muxx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Aluno/Desktop/Aula 6 - LSD|C:/Users/Aluno/Desktop/Aula 6 - LSD/muxx.v|
+!s101 -O0
+R3
+R4

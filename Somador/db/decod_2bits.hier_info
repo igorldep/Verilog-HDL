@@ -1,0 +1,41 @@
+|decod_2bits
+SW[17] => SW[17].IN1
+SW[16] => SW[16].IN1
+SW[15] => SW[15].IN1
+HEX0[6] <= decod:comb_4.port2
+HEX0[5] <= decod:comb_4.port2
+HEX0[4] <= decod:comb_4.port2
+HEX0[3] <= decod:comb_4.port2
+HEX0[2] <= decod:comb_4.port2
+HEX0[1] <= decod:comb_4.port2
+HEX0[0] <= decod:comb_4.port2
+
+
+|decod_2bits|somador:comb_3
+a => saida.IN0
+a => ts.IN0
+a => ts.IN0
+b => saida.IN1
+b => ts.IN1
+b => ts.IN0
+te => saida.IN1
+te => ts.IN1
+te => ts.IN1
+ts <= ts.DB_MAX_OUTPUT_PORT_TYPE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decod_2bits|decod:comb_4
+TS => Decoder0.IN0
+TS => saida[6].DATAIN
+S => Decoder0.IN1
+S => saida[4].DATAIN
+saida[6] <= TS.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= S.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= <GND>
+saida[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+

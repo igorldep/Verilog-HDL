@@ -1,0 +1,3 @@
+module c_exor;
+
+//2'b11 => 2: num. de bits; ': separar; b: binário; "11": num. em binário

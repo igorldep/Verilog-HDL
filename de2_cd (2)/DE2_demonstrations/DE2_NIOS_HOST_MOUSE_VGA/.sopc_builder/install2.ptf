@@ -1,0 +1,5 @@
+PACKAGE install2 
+{
+   # This file informs the Nios II IDE of TCL component paths.
+   # Generated 2007.06.20.16:06:15
+}

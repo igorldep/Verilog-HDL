@@ -1,0 +1,8 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Aluno/Downloads/Aula2/Aula2/Comportamental/c_exor.v
+source_file = 1, C:/Users/Aluno/Downloads/Aula2/Aula2/Comportamental/db/c_exor.cbx.xml
+design_name = c_exor
+instance = comp, \b~I , b, c_exor, 1
+instance = comp, \a~I , a, c_exor, 1
+instance = comp, \y~0 , y~0, c_exor, 1
+instance = comp, \y~I , y, c_exor, 1

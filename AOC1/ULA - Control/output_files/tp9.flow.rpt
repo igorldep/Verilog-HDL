@@ -1,0 +1,142 @@
+Flow report for tp9
+Tue Jul 04 18:00:44 2017
+Quartus Prime Version 17.0.0 Build 290 04/26/2017 SJ Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Legal Notice
+  3. Flow Summary
+  4. Flow Settings
+  5. Flow Non-Default Global Settings
+  6. Flow Elapsed Time
+  7. Flow OS Summary
+  8. Flow Log
+  9. Flow Messages
+ 10. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++--------------------------------------------------------------------------+
+; Flow Summary                                                             ;
++-----------------------------+--------------------------------------------+
+; Flow Status                 ; Successful - Tue Jul 04 18:00:44 2017      ;
+; Quartus Prime Version       ; 17.0.0 Build 290 04/26/2017 SJ Pro Edition ;
+; Revision Name               ; tp9                                        ;
+; Top-level Entity Name       ; tp9                                        ;
+; Family                      ; Cyclone 10 GX                              ;
+; Device                      ; 10CX220YF780I5G                            ;
+; Timing Models               ; Final                                      ;
+; Logic utilization (in ALMs) ; 0 / 80,330 ( 0 % )                         ;
+; Total registers             ; 0                                          ;
+; Total pins                  ; 0 / 340 ( 0 % )                            ;
+; Total virtual pins          ; 0                                          ;
+; Total block memory bits     ; 0 / 12,021,760 ( 0 % )                     ;
+; Total DSP Blocks            ; 0 / 192 ( 0 % )                            ;
+; Total HSSI RX channels      ; 0 / 12 ( 0 % )                             ;
+; Total HSSI TX channels      ; 0 / 12 ( 0 % )                             ;
+; Total PLLs                  ; 0 / 30 ( 0 % )                             ;
++-----------------------------+--------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 07/04/2017 17:57:44 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; tp9                 ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                     ;
++--------------------------+--------------------------------+---------------+-------------+------------+
+; Assignment Name          ; Value                          ; Default Value ; Entity Name ; Section Id ;
++--------------------------+--------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID    ; 33852178721744.149920186402376 ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP   ; 100                            ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP   ; -40                            ; --            ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY ; output_files                   ; --            ; --          ; --         ;
++--------------------------+--------------------------------+---------------+-------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Synthesis                 ; 00:00:26     ; 1.0                     ; 786 MB              ; 00:00:50                           ;
+; Fitter                    ; 00:01:51     ; 1.0                     ; 3710 MB             ; 00:02:21                           ;
+; TimeQuest Timing Analyzer ; 00:00:13     ; 1.0                     ; 1674 MB             ; 00:00:11                           ;
+; Assembler                 ; 00:00:23     ; 1.0                     ; 1539 MB             ; 00:00:20                           ;
+; Total                     ; 00:02:53     ; --                      ; --                  ; 00:03:42                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                          ;
++---------------------------+------------------+-------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name     ; OS Version ; Processor type ;
++---------------------------+------------------+-------------+------------+----------------+
+; Synthesis                 ; Antonio-pc       ; Windows 8.1 ; 6.3        ; x86_64         ;
+; Fitter                    ; Antonio-pc       ; Windows 8.1 ; 6.3        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Antonio-pc       ; Windows 8.1 ; 6.3        ; x86_64         ;
+; Assembler                 ; Antonio-pc       ; Windows 8.1 ; 6.3        ; x86_64         ;
++---------------------------+------------------+-------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_syn --read_settings_files=off --write_settings_files=off tp9 -c tp9
+quartus_syn --read_settings_files=off --write_settings_files=off tp9 -c tp9
+quartus_fit --read_settings_files=off --write_settings_files=off tp9 -c tp9
+quartus_sta tp9 -c tp9 --mode=finalize
+quartus_asm --read_settings_files=off --write_settings_files=off tp9 -c tp9
+
+
+

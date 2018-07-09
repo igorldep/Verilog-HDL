@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Jun 22 17:30:04 2007
+Quartus II Version : 7.1 Build 156 04/30/2007 SJ Full Version
+Revision Name : DE2_USB_API
+Top-level Entity Name : DE2_USB_API
+Family : Cyclone II
+Total logic elements : 2,166
+    Total combinational functions : 2,166
+    Dedicated logic registers : 1,138
+Total registers : 1138
+Total pins : 425
+Total virtual pins : 0
+Total memory bits : 307,200
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 2

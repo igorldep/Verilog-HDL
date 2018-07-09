@@ -1,0 +1,8 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Aluno/Downloads/Aula2/Aula2/Fluxo/f_exor.v
+source_file = 1, C:/Users/Aluno/Downloads/Aula2/Aula2/Fluxo/db/f_exor.cbx.xml
+design_name = f_exor
+instance = comp, \B~I , B, f_exor, 1
+instance = comp, \A~I , A, f_exor, 1
+instance = comp, \Y~0 , Y~0, f_exor, 1
+instance = comp, \Y~I , Y, f_exor, 1

@@ -1,0 +1,8 @@
+|E_XOR
+Y <= SaidaXOR.DB_MAX_OUTPUT_PORT_TYPE
+A => and2.IN0
+A => and1.IN0
+B => and1.IN1
+B => and2.IN1
+
+

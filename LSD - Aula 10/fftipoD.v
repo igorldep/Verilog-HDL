@@ -1,0 +1,21 @@
+module fftipoD (clock,reset,D,Q);
+
+input D, clock, reset;
+output Q;
+reg saida;
+
+initial
+begin
+	saida = 1'b0;
+end
+
+always @ (posedge clock or negedge reset)
+
+begin
+	if (~reset)
+		saida = 1'b0;
+	else
+		saida = D;
+	end
+		assign Q = saida;
+endmodule

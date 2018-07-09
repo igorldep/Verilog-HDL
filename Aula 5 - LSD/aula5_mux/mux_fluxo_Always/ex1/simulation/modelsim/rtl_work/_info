@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Aluno\Desktop\Aula 5 - LSD\aula5_mux\mux_fluxo_Always\ex1\simulation\modelsim
+vmux_21
+!i10b 1
+!s100 9e7O8RaT4:Begi6Og@NVK3
+IaLoXj0ddk7MzhSGgNOe5>1
+VFGVB3I<06lE9S_Son]=dk1
+Z1 dC:\Users\Aluno\Desktop\Aula 5 - LSD\aula5_mux\mux_fluxo_Always\ex1\simulation\modelsim
+w1473344560
+8C:/Users/Aluno/Desktop/Aula 5 - LSD/aula5_mux/mux_fluxo_Always/ex1/mux_21.v
+FC:/Users/Aluno/Desktop/Aula 5 - LSD/aula5_mux/mux_fluxo_Always/ex1/mux_21.v
+L0 1
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1473344647.056000
+!s107 C:/Users/Aluno/Desktop/Aula 5 - LSD/aula5_mux/mux_fluxo_Always/ex1/mux_21.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Aluno/Desktop/Aula 5 - LSD/aula5_mux/mux_fluxo_Always/ex1|C:/Users/Aluno/Desktop/Aula 5 - LSD/aula5_mux/mux_fluxo_Always/ex1/mux_21.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work {+incdir+C:/Users/Aluno/Desktop/Aula 5 - LSD/aula5_mux/mux_fluxo_Always/ex1} -O0

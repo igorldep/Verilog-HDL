@@ -1,0 +1,11 @@
+module mux_case (output reg s, input ip, i1, sel);
+
+always @(*)
+	begin
+		case(sel)
+			1'b0 : s = i0;
+			1'b1 : s = i1;
+		endcase
+	end
+	
+endmodule

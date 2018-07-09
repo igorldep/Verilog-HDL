@@ -1,0 +1,48 @@
+!SESSION 2007-06-22 14:19:08.609 -----------------------------------------------
+eclipse.buildId=M20060629-1905
+java.version=1.5.0_06
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 1 0 2007-06-22 14:19:10.546
+!MESSAGE Conversion of persistent properties completed successfully.
+
+!ENTRY org.eclipse.cdt.debug.core 4 1000 2007-06-22 14:19:15.984
+!MESSAGE Unable to restore source location: Unable to initialize source location - invalid directory path C:\altera\kits\nios2_60\bin\nios2-gnutools\src.
+
+!ENTRY org.eclipse.cdt.debug.core 4 1000 2007-06-22 14:19:17.906
+!MESSAGE Unable to restore source location: Unable to initialize source location - invalid directory path C:\altera\kits\nios2_60\bin\nios2-gnutools\src.
+!SESSION 2007-06-22 14:19:38.765 -----------------------------------------------
+eclipse.buildId=M20060629-1905
+java.version=1.5.0_06
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Command-line arguments:  -data D:\keith_temp\quartusII\DE2_System_v1.5\DE2_System_v1.5\DE2_demonstrations\DE2_NET -os win32 -ws win32 -arch x86
+
+!ENTRY com.altera.nj.launch 1 0 2007-06-22 14:20:24.515
+!MESSAGE jtagconfig --listhardware 
+
+!ENTRY com.altera.nj.launch 1 0 2007-06-22 14:20:25.296
+!MESSAGE jtagconfig --cable USB-Blaster [USB-0] --extra-info 
+!SESSION 2007-06-22 14:23:36.984 -----------------------------------------------
+eclipse.buildId=M20060629-1905
+java.version=1.5.0_06
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Command-line arguments:  -data D:\keith_temp\quartusII\DE2_System_v1.5\DE2_System_v1.5\DE2_demonstrations\DE2_NET -os win32 -ws win32 -arch x86
+
+!ENTRY com.altera.nj.launch 1 0 2007-06-22 14:23:58.484
+!MESSAGE jtagconfig --listhardware 
+
+!ENTRY com.altera.nj.launch 1 0 2007-06-22 14:23:59.312
+!MESSAGE jtagconfig --cable USB-Blaster [USB-0] --extra-info 
+!SESSION 2007-06-22 14:24:33.765 -----------------------------------------------
+eclipse.buildId=M20060629-1905
+java.version=1.5.0_06
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.altera.ide.core 1 0 2007-06-22 14:24:49.062
+!MESSAGE C:\altera\71\quartus\bin\cygwin\bin/cygpath --unix --file - 
